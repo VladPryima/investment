@@ -37,7 +37,7 @@ body {
     color: white;
 }
 /*Контейнер для первого блока - навигации и вводной инормации*/
-.headerContainer {
+.header-section {
     height: 870px;
     background-color: black; 
     background-image: url(../images/skyScrapper.jpg);
@@ -46,37 +46,37 @@ body {
     background-position: top 2380px left 0px ;
     background-size: cover;
     
-    
-    
     .header {
         width: 1170px;
         margin: 0 auto;
         height: inherit;
         
         
-        .navContainer {
+        
+        .nav-container {
             height: 90px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             
            
-            .companyName {
-                width: 185px; //Было 181
-                height: 24px;
+            .nav-container__companyName {
                 text-transform: uppercase;
                 font-family: 'Josefin Sans';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 24px;
-                line-height: 24px;
-                /* identical to box height, or 100% */
                 letter-spacing: 0.06em;
-                /* White */
                 color: #FFFFFF;
                 
             }
-            .navBlockContainer {
+            .nav-container__companyName--sizeDesctop {
+                width: 185px; //Было 181
+                height: 24px;
+
+                font-size: 24px;
+                line-height: 24px;     
+            }
+            .nav-block {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -85,65 +85,89 @@ body {
                 gap: 24px;
                 height: 54px;
                 font-family: 'Josefin Sans';
-                
-                .opportunitiesDropdown {
-                    width: 216px; 
+
+                //Oppurtunities dropdown
+                .dropdown {
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 24px;
-                    display: block;
+                    color: #FFFFFF;
+                }
+                //Размеры кстати необязательные
+                .dropdown--large-width {
+                    width: 216px; 
+                    
+                     
+                }
+                .dropdown--medium-width {
+                    width: 117px;
                     
                     
                 }
-                .hiddenList {
+                .dropdown__hidden-list {
                     display: none;   
                 }
-                .dropDownHover:hover {
+                .dropdown:hover {
                     position: relative;
                     z-index: 10;
                     top: 36px; //Чтобы при ховере увеличенный блок не центрировался флексом
                     cursor: pointer;
+                    overflow: visible;
                    
-                    .hiddenList {
+                    .dropdown__hidden-list {
                         display: block;
                         position: relative;
                     }
-                    .hiddenList:hover {
-                        box-sizing: border-box;
-                        
-                        
+                    .dropdown__hidden-list:hover::after {
+                        content: url(../images/carete-down.svg);
+                        transform: rotate(90deg);
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
                     }
+                    
                 }
-                .howItWorkDropdown {
-                    width: 117px;
-                }
+                
                 .login {
-                    width: 135px;
-                    height: 54px; //90 - 40% = 54px (60%)
-                    margin: 0;
                     background-color: $purple;
                     color: white;
                     text-transform: uppercase;
                     transition: all .2s;
+                }
+                .login--desctop-size {
+                    width: 135px;
+                    height: 54px; //90 - 40% = 54px (60%)
+                    margin: 0;
                 }
                 .login:hover {
                     background-color: $purpleLighter;
                     cursor: pointer;
                 }
                 .register {
-                    width: 160px;
-                    height: 54px;
                     color: $purple;
                     margin: 0;
                     text-transform: uppercase;
+                   
+                }
+                .register--desctop-size {
+                    width: 160px;
+                    height: 54px;
+
                 }
                 .register:hover {
                     background-color: #f2e7f3;
                     cursor: pointer;
                 }
-                //Шрифты для двух dropdown и кнопок совпадают - сделал общие правила
+                .logAndRegFont {
+                    font-family: 'Josefin Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+                //Шрифт для About us
                 .linksFont {
                     font-family: 'Josefin Sans';
                     font-style: normal;
@@ -152,27 +176,18 @@ body {
                     line-height: 24px;
                     color: #FFFFFF;
                 }
-                .logAndRegFont {
-                    font-family: 'Josefin Sans';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 16px;
-                }
             }
         }
-    .initialInfoContainer {
+        //Вводная информация
+        .initial-info-container {
             height: 780px;
             position: relative;
             z-index: 5;
-           
-            .initialInfoContainer_initialInfo {
+            .initial-info {
                 width: 770px;
                 height: 374px;
                 margin-top: 231px;
-                
-                
-                
-                .initialInfo_title {
+                .initial-info__title {
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 700;
@@ -181,20 +196,16 @@ body {
                     color: white;
                     padding: 0;
                     margin: 0;
-                    
-                    
-
                 }
-                .initialInfo_description {
+                .initial-info__description {
                     width: 470px;
-                    
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 24px;
                     line-height: 32px;
                 }
-                .initialInfo_button {
+                .initial-info__button {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -212,9 +223,8 @@ body {
 
                     cursor: pointer;
                 }
-                .initialInfo_button:hover {
+                .initial-info__button:hover {
                     background-color: $purpleLighter;
-
                 }
               
                 
@@ -223,7 +233,7 @@ body {
     }
     
             /*bg декор для хэдэра*/
-            .backgroundDecor {
+            .header-section__backgroundDecor {
                 position: absolute;
                 width: 554px;
                 height: 554px;
@@ -231,10 +241,9 @@ body {
                 top: 316px;
                 background-image: url(../images/headerSharpLinesc.png);
             }
-            .decorShape {
+            .header-section__decorShape {
                 width: 558px;
                 height: 558px;
-                
                 border-radius: 100%;
                 background-color: rgba(51, 110, 225, 0.5);;
                 position: absolute;
@@ -245,111 +254,74 @@ body {
     
 }
 
-.offeringForInvestorContainer {
+.offering-for-investor-container {
     height: 1680px;
     width: 1920px;
     background-color: $white;
     position: relative; //Для фигуры спинера 
-    border-top: 1px solid transparent;
-    .offeringForInvestorContainer_childContainer {
+    border-top: 1px solid transparent; //Для марджина
+    .offering-for-investor {
         width: 1170px;
         height: 100%;
         margin: 0 auto;
       
-        
-           
-        .titleAndDescriptionContainer {
+        .offering-for-investor__title-description-wrapper {
             width: 770px;
             height: 152px;
             margin: 160px auto 60px auto;
             
-            .titleAndDescription_title {
+            .offering-for-investor__title {
                 font-family: 'Josefin Sans';
                 font-style: normal;
                 font-weight: 700;
                 font-size: 48px;
                 line-height: 64px;
-                /* identical to box height, or 133% */
-
                 text-align: center;
                 color: black;
-              
                 padding: 0;
                 margin: 0;
                 margin-bottom: 24px;
             }
-            .titleAndDescription_description {
+            .offering-for-investor__description {
                 font-family: 'Josefin Sans';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 24px;
                 line-height: 32px;
-                /* or 133% */
                 text-align: center;
-                /* Grey/2 */
                 color: #999999;
             }
         }
-        .investCardsContainer {
+        .invest-cards-container {
             width: 1170px; //1170
             height: 1000px;
            
             display: grid;
-            grid-template-rows: 480px 480px ;
+            grid-template-rows: 480px 480px;
             grid-template-columns: 370px 370px 370px;
             grid-gap: 40px 30px;
             
-            .cardContainer {
+            .cards-content {
                 width: 370px;
                 height: 480px; //480px - этот уменьшим до 480px и постави хидден
                 overflow: hidden;
                
-               
-                .cardContainer_childContainer {
+                .card {
                     position: relative;
                     top: 0;
                     width: 370px;
                     height: 720px; //480px тут оставим размер
                 }
-                .cardContainer_childContainer:hover {
+                .card:hover {
                     position: relative;
                     transition: all 1s ease-in-out;
-                    top: -244px;
-                    
+                    top: -244px;      
                 }
-                /*Бэкраунд для imageContainer - сам контейнер ниже -  imageContainer*/
-                .imagePathScyScrapper {
-                    background-image: url(../images/investCardImg/buildingBlack.jpg);
-                    background-size: cover;
-                }
-                .imagePathKeychainHouse {
-                    background-image: url(../images/investCardImg/keyChainHouse.jpg);
-                    background-size: cover;
-
-                }
-                .imagePathBuildingNature {
-                    background-image: url(../images/investCardImg/buildingNature.jpg);
-                    background-size: cover;
-
-                }
-                .imagePathLaptop {
-                    background-image: url(../images/investCardImg/laptopjpg.jpg);
-                    background-size: cover;
-                }
-                .imagePathOffice {
-                    background-image: url(../images/investCardImg/office.jpg);
-                    background-size: cover;
-                }
-                .imagePathWheat {
-                    background-image: url(../images/investCardImg/wheatField.jpg);
-                    background-size: cover;
-
-                }
-                .imageContainer {
+                .image-container {
                     width: 370px;
                     height: 240px;
                     border-top: 1px solid transparent; //нужнен для работающего margin тегов
-                    .imageContainer_tagsContainer {
+                    .tags-container {
                         width: 322px; //по 24px отступы
                         display: flex;
                         justify-content: flex-start;
@@ -358,8 +330,7 @@ body {
                         gap: 8px;
                         min-height: 50px;
                         margin: 24px auto 0 24px;
-                       
-                        .imageContainer_tagsContainer_tag {
+                        .tags-container__tag {
                             padding: 8px 12px 6px 12px;
                             background: rgba(255, 255, 255, 0.8);
                             text-transform: uppercase;
@@ -373,14 +344,14 @@ body {
                         } //32px, сами теги прижать
                     }
                 }
-                .cardDescriptionTitleAndRangeContainer {
+                .description-and-range-container {
                     width: 322px;  //Ширина 370px, но падинги по 24 px - просто сделал блок
                     height: 240px;
                     margin: 0 auto;
                     border-top: 1px solid transparent;
                     border-bottom: 1px solid #ECECEC; 
                     
-                    .cardTitle {
+                    .description-and-range-container__title {
                         height: 32px;
                         font-family: 'Josefin Sans';
                         font-style: normal;
@@ -393,7 +364,7 @@ body {
                         margin: 24px 0 0 0;      
                        
                     }
-                    .cardCity {
+                    .description-and-range-container__city {
                         height: 24px;
                         font-family: 'Josefin Sans';
                         font-style: normal;
@@ -405,7 +376,7 @@ body {
                         color: #999999;
                         margin: 0;   
                     }
-                    .cardDescription {
+                    .description-and-range-container__description {
                         width: 322px; //2: Ширина 370px, но падинги по 24 px - просто сделал блок
                         height: 48px;
                         margin: 24px 0 0 0;
@@ -419,29 +390,27 @@ body {
                         /* Grey/1 */
                         color: #333333;
                     }
-                    .cardEarnScaleContainer {
+                    .earn-container {
                         width: 322px;
                         height: 40px;
                         margin-top: 24px;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                       
-                       
-                        .scaleContainerBgGray {
+                        .earn-container__range {
                             height: 8px;
                             width: 100%;
                             background-color: #ECECEC;
                           
-                            .scaleContainerBgPurple {
+                            .earn-container__scale {
                                 height: 100%;
                                 width: 58%;
                                 background-color: $purple;
                             }
                         }
-                        .cardMoney {
+                        .money-container {
                             height: 24px;
-                            .cardMoney_purple {
+                            .money-container__raised {
                                 color: $purple;
                                 height: 24px;
                                 font-family: 'Josefin Sans';
@@ -450,7 +419,7 @@ body {
                                 font-size: 16px;
                                 line-height: 24px;
                             }
-                            .cardMoney_gray {
+                            .money-container__raised-of {
                                 height: 24px;
 
                                 font-family: 'Josefin Sans';
@@ -463,27 +432,26 @@ body {
                                 color: #333333;
                             }
 
-
                         }
 
                     }
                     
                 }
-                .cardIvestConditionsContainer {
+                .investment-conditions-container {
                     height: 240px;
                     width: 370px;
-                    .topMargin {
+                    .conditions-content--margin-top {
                         margin-top: 24px !important;
                     }
-                    .cardConditions {
+                    .conditions-content {
                         width: 322px; 
                         margin: 0 auto;
-                        .conditionWrapper {
+                        .condition-wrapper {
                             height: 24px;
                             margin-bottom: 8px;
                             display: flex;
                             justify-content: space-between;
-                            .condition {
+                            .condition-wrapper__condition {
                                 height: 24px;
                                 font-family: 'Josefin Sans';
                                 font-style: normal;
@@ -495,7 +463,7 @@ body {
                                 /* Grey/1 */
                                 color: #333333;
                             }
-                            .value {
+                            .condition-wrapper__value {
                                 height: 24px;
                                 font-family: 'Josefin Sans';
                                 font-style: normal;
@@ -509,7 +477,7 @@ body {
 
                         }
                     }
-                    .cardViewBtn {
+                    .investment-conditions-container__button {
                         padding: 24px 40px 22px;
                         margin-top: 24px;
                         width: 100%;
@@ -524,16 +492,45 @@ body {
                         line-height: 24px;
                         color: white;
                     }
-                    .cardViewBtn:hover {
+                    .investment-conditions-container__button:hover {
                         background: #235ac7;
                         cursor: pointer;
 
                     }
 
                 }
+                /*Бэкраунд для imageContainer - сам контейнер ниже -  imageContainer*/
+                .bg-image-path--scy-scrapper {
+                    background-image: url(../images/investCardImg/buildingBlack.jpg);
+                    background-size: cover;
+                }
+                .bg-image-path--key-chain {
+                    background-image: url(../images/investCardImg/keyChainHouse.jpg);
+                    background-size: cover;
+
+                }
+                .bg-image-path--building-nature {
+                    background-image: url(../images/investCardImg/buildingNature.jpg);
+                    background-size: cover;
+
+                }
+                .bg-image-path--laptop {
+                    background-image: url(../images/investCardImg/laptopjpg.jpg);
+                    background-size: cover;
+                }
+                .bg-image-path--office {
+                    background-image: url(../images/investCardImg/office.jpg);
+                    background-size: cover;
+                }
+                .bg-image-path--wheat {
+                    background-image: url(../images/investCardImg/wheatField.jpg);
+                    background-size: cover;
+
+                }
+               
             }
         }
-        .viewAllProjectsBtn {
+        .invest-cards-container__button {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -562,40 +559,40 @@ body {
 
 
         }
-        .viewAllProjectsBtn:hover {
+        .invest-cards-container__button:hover {
             background-color: #336EE1;
             color: white;
             cursor: pointer;
         }
 
     }
-    .decorSpinner {
-        width: 306px;
-        height: 301px;
-        background: url(../images/spinnerDecor.svg);
-        background-size: cover;
-        position: absolute;
-        left: 40px;
-        top: 35.5%;
-        animation: spinner 20s linear  infinite;
+        .invest-cards-container__decor-spinner {
+            width: 306px;
+            height: 301px;
+            background: url(../images/spinnerDecor.svg);
+            background-size: cover;
+            position: absolute;
+            left: 40px;
+            top: 35.5%;
+            animation: spinner 20s linear  infinite;
 
-        @keyframes spinner {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+            @keyframes spinner {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
             
-        }
+            }
     }
 }
-.paymantsToInvestorContainer {
+.paymants-to-investor-container {
     height: 696px;
     background: #ECF4FD;
     position: relative;
     z-index: 10;
-    .paymantsToInvestorContainer_childContainer {
+    .paymants-to-investor-content {
         width: 1170px;
         height: 100%;
         
@@ -607,11 +604,11 @@ body {
         gap: 29px;
         position: relative;
         z-index: 10;
-        .summOfInvestorPaids {
+        .summ-of-paids {
             height: 376px;
             width: 570px;
             display: block;
-            .summOfInvestorPaids_title {
+            .summ-of-paids__title {
                 height: 128px;
                 font-family: 'Josefin Sans';
                 font-style: normal;
@@ -623,7 +620,7 @@ body {
                 color: #333333;
                 margin: 40px 0 24px 0;
             }
-            .summOfInvestorPaids_description {
+            .summ-of-paids__description {
                 height: 128px;
                 font-family: 'Josefin Sans';
                 font-style: normal;
@@ -637,20 +634,15 @@ body {
             }
             
         }
-        .chartContainer {
+        .chart-container {
             width: 570px;
             height: 356px;
-            
-            display: block;
-           
-            
+            display: block; 
         }
     }
-    .decor_roundedFigure {
-        
+    .paymants-to-investor-container--decor-rounded-figure {
         height: 424px;
         width: 607.03px;
-        
         background-image: url(../images/roundedFigure.svg);
         background-size: cover;
         position: absolute;
@@ -658,34 +650,31 @@ body {
         left: 0;
         z-index: 5;
     }
-    .decor_Circle {
+    .paymants-to-investor-container--decor-circle {
         position: absolute;
         right: 3.89%;
         top: 0;
 
     }
 }
-.offerForGrowCapitalContainer { 
+.offer-for-grow-capital-container { 
     width: 1920px;
     height: 781.38px;
-  
     background-color: white; //Можно убрать, с зеленым забавно
     position: relative;
     
-    .offerForGrowCapitalContainer_childContainer {
+    .offer-for-grow-capital-content {
         width: 1170px;
         height: 100%;
-        
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
        
-        .titleDescriptionAndButton {
-            
+        .title-description-button {
             width: 570px;
             height: 422px;
-            .titleDescriptionAndButton_title {
+            .title-description-button__title {
                 height: 192px;
                 font-family: 'Josefin Sans';
                 font-style: normal;
@@ -697,7 +686,7 @@ body {
                 color: #333333;
                 margin-bottom: 24px;
             }
-            .titleDescriptionAndButton_description {
+            .title-description-button__description {
                 height: 96px;
                 font-family: 'Josefin Sans';
                 font-style: normal;
@@ -709,7 +698,7 @@ body {
                 color: #999999;
                 margin-bottom: 40px;
             }
-            .titleDescriptionAndButton_button {
+            .title-description-button__button {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -729,7 +718,7 @@ body {
                 /* White */
                 color: #FFFFFF;
             }
-            .titleDescriptionAndButton_button:hover {
+            .title-description-button__button:hover {
                 background-color: $purpleLighter;
                 cursor: pointer;
             }
@@ -737,7 +726,7 @@ body {
         }
         
     }
-    .offerForGrowCapitalContainer_decorSpinner {
+    .offer-for-grow-capital-container__decorSpinner {
         width: 306px;
         height: 301px;
         background: url(../images/spinnerDecor.svg);
@@ -749,11 +738,11 @@ body {
     
 }
 
-.footerContainer {
+.footer-container {
     width: 1920px;
     height: 484px;
     background-color: #ECECEC;
-    .footerContainer_footer {
+    .footer-content {
         width: 1170px;
         height: 100%;
         display: flex;
@@ -763,7 +752,7 @@ body {
         //160 30 50
         margin: 0 auto;
 
-        .footerContainer_footer_nameAndCopyrightContainer {
+        .name-copyright-content {
             width: 370px;
             height: 69px;
             
@@ -771,7 +760,7 @@ body {
             flex-direction: column;
             justify-content: space-between;
             margin-right: 130px;
-            .companyName {
+            .name-copyright-content__company-name {
                 height: 24px;
                 text-transform: uppercase;
                 font-family: 'Josefin Sans';
@@ -785,7 +774,7 @@ body {
                 color: #333333;
     
             }
-            .copyright {
+            .name-copyright-content__copyright {
                 height: 15px;
     
                 font-family: 'Josefin Sans';
@@ -804,19 +793,18 @@ body {
             }
         }
         /*Services*/
-        .services {
+        .services-content {
             width: 270px;
             height: 184px;
            
             margin-right: 30px;
-            .services_ul {
-               
+            .services {
                 display: flex;
                 height: 100%;
                 width: 100%;
                 flex-direction: column;
                 justify-content: space-between;
-                .services_ul_firstLi {
+                .services__first-li {
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 700;
@@ -840,19 +828,19 @@ body {
             }
         }
         /*About*/
-        .about {
+        .about-content {
             width: 270px;
             height: 184px;
             
             margin-right: 50px;
-            .about_ul {
+            .about {
                 
                 display: flex;
                 height: 100%;
                 width: 100%;
                 flex-direction: column;
                 justify-content: space-between;
-                .about_ul_firstLi {
+                .about__first-li {
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 700;
@@ -875,13 +863,13 @@ body {
                 }
             }
         }
-        .footerContainer_footer_subscribeContainer {
+        .subscribe-content {
             width: 370px;
             height: 103px;
             
             margin-top: 77px;
             
-            .subscribeContainer_title {
+            .subscribe-content__title {
                 height: 36px;
                 font-family: 'Josefin Sans';
                 font-style: normal;
@@ -894,19 +882,19 @@ body {
                 margin: 0;
                 
             }
-            .emailFormContainer {
+            .email-form-content {
                 height: 51px;
                 width: 100%;
                 margin-top: 16px;
                 border-bottom: 1px solid gray;
                 
-                .form {
+                .email-form {
                     height: 100%;
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    .email {
+                    .email-form__email {
                         background-color: #ECECEC;
                         height: 24px;
                         border: none;
@@ -920,7 +908,7 @@ body {
                         color: #333333;
             
                     }
-                    .submit {
+                    .email-form__submit-button {
                         width: 50px;
                         height: 50px;
                        
@@ -935,7 +923,7 @@ body {
         }
     }
     }
-    .socialMediaIcons {
+    .social-media-icons-content {
         width: 123.49px;
         height: 16px;
    

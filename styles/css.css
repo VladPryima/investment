@@ -21,7 +21,7 @@ body {
 }
 
 /*Контейнер для первого блока - навигации и вводной инормации*/
-.headerContainer {
+.header-section {
   height: 870px;
   background-color: black;
   background-image: url(../images/skyScrapper.jpg);
@@ -29,32 +29,32 @@ body {
   background-size: cover;
   /*bg декор для хэдэра*/
 }
-.headerContainer .header {
+.header-section .header {
   width: 1170px;
   margin: 0 auto;
   height: inherit;
 }
-.headerContainer .header .navContainer {
+.header-section .header .nav-container {
   height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.headerContainer .header .navContainer .companyName {
-  width: 185px;
-  height: 24px;
+.header-section .header .nav-container .nav-container__companyName {
   text-transform: uppercase;
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  /* identical to box height, or 100% */
   letter-spacing: 0.06em;
-  /* White */
   color: #FFFFFF;
 }
-.headerContainer .header .navContainer .navBlockContainer {
+.header-section .header .nav-container .nav-container__companyName--sizeDesctop {
+  width: 185px;
+  height: 24px;
+  font-size: 24px;
+  line-height: 24px;
+}
+.header-section .header .nav-container .nav-block {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,59 +64,7 @@ body {
   height: 54px;
   font-family: "Josefin Sans";
 }
-.headerContainer .header .navContainer .navBlockContainer .opportunitiesDropdown {
-  width: 216px;
-  font-family: "Josefin Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  display: block;
-}
-.headerContainer .header .navContainer .navBlockContainer .hiddenList {
-  display: none;
-}
-.headerContainer .header .navContainer .navBlockContainer .dropDownHover:hover {
-  position: relative;
-  z-index: 10;
-  top: 36px;
-  cursor: pointer;
-}
-.headerContainer .header .navContainer .navBlockContainer .dropDownHover:hover .hiddenList {
-  display: block;
-  position: relative;
-}
-.headerContainer .header .navContainer .navBlockContainer .dropDownHover:hover .hiddenList:hover {
-  box-sizing: border-box;
-}
-.headerContainer .header .navContainer .navBlockContainer .howItWorkDropdown {
-  width: 117px;
-}
-.headerContainer .header .navContainer .navBlockContainer .login {
-  width: 135px;
-  height: 54px;
-  margin: 0;
-  background-color: #7B61FF;
-  color: white;
-  text-transform: uppercase;
-  transition: all 0.2s;
-}
-.headerContainer .header .navContainer .navBlockContainer .login:hover {
-  background-color: #836eec;
-  cursor: pointer;
-}
-.headerContainer .header .navContainer .navBlockContainer .register {
-  width: 160px;
-  height: 54px;
-  color: #7B61FF;
-  margin: 0;
-  text-transform: uppercase;
-}
-.headerContainer .header .navContainer .navBlockContainer .register:hover {
-  background-color: #f2e7f3;
-  cursor: pointer;
-}
-.headerContainer .header .navContainer .navBlockContainer .linksFont {
+.header-section .header .nav-container .nav-block .dropdown {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -124,23 +72,87 @@ body {
   line-height: 24px;
   color: #FFFFFF;
 }
-.headerContainer .header .navContainer .navBlockContainer .logAndRegFont {
+.header-section .header .nav-container .nav-block .dropdown--large-width {
+  width: 216px;
+}
+.header-section .header .nav-container .nav-block .dropdown--medium-width {
+  width: 117px;
+}
+.header-section .header .nav-container .nav-block .dropdown__hidden-list {
+  display: none;
+}
+.header-section .header .nav-container .nav-block .dropdown:hover {
+  position: relative;
+  z-index: 10;
+  top: 36px;
+  cursor: pointer;
+  overflow: visible;
+}
+.header-section .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list {
+  display: block;
+  position: relative;
+}
+.header-section .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list:hover::after {
+  content: url(../images/carete-down.svg);
+  transform: rotate(90deg);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.header-section .header .nav-container .nav-block .login {
+  background-color: #7B61FF;
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.header-section .header .nav-container .nav-block .login--desctop-size {
+  width: 135px;
+  height: 54px;
+  margin: 0;
+}
+.header-section .header .nav-container .nav-block .login:hover {
+  background-color: #836eec;
+  cursor: pointer;
+}
+.header-section .header .nav-container .nav-block .register {
+  color: #7B61FF;
+  margin: 0;
+  text-transform: uppercase;
+}
+.header-section .header .nav-container .nav-block .register--desctop-size {
+  width: 160px;
+  height: 54px;
+}
+.header-section .header .nav-container .nav-block .register:hover {
+  background-color: #f2e7f3;
+  cursor: pointer;
+}
+.header-section .header .nav-container .nav-block .logAndRegFont {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
 }
-.headerContainer .header .initialInfoContainer {
+.header-section .header .nav-container .nav-block .linksFont {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.header-section .header .initial-info-container {
   height: 780px;
   position: relative;
   z-index: 5;
 }
-.headerContainer .header .initialInfoContainer .initialInfoContainer_initialInfo {
+.header-section .header .initial-info-container .initial-info {
   width: 770px;
   height: 374px;
   margin-top: 231px;
 }
-.headerContainer .header .initialInfoContainer .initialInfoContainer_initialInfo .initialInfo_title {
+.header-section .header .initial-info-container .initial-info .initial-info__title {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -150,7 +162,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.headerContainer .header .initialInfoContainer .initialInfoContainer_initialInfo .initialInfo_description {
+.header-section .header .initial-info-container .initial-info .initial-info__description {
   width: 470px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -158,7 +170,7 @@ body {
   font-size: 24px;
   line-height: 32px;
 }
-.headerContainer .header .initialInfoContainer .initialInfoContainer_initialInfo .initialInfo_button {
+.header-section .header .initial-info-container .initial-info .initial-info__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -173,10 +185,10 @@ body {
   color: white;
   cursor: pointer;
 }
-.headerContainer .header .initialInfoContainer .initialInfoContainer_initialInfo .initialInfo_button:hover {
+.header-section .header .initial-info-container .initial-info .initial-info__button:hover {
   background-color: #836eec;
 }
-.headerContainer .backgroundDecor {
+.header-section .header-section__backgroundDecor {
   position: absolute;
   width: 554px;
   height: 554px;
@@ -184,7 +196,7 @@ body {
   top: 316px;
   background-image: url(../images/headerSharpLinesc.png);
 }
-.headerContainer .decorShape {
+.header-section .header-section__decorShape {
   width: 558px;
   height: 558px;
   border-radius: 100%;
@@ -195,48 +207,45 @@ body {
   top: 180px;
 }
 
-.offeringForInvestorContainer {
+.offering-for-investor-container {
   height: 1680px;
   width: 1920px;
   background-color: #FFFFFF;
   position: relative;
   border-top: 1px solid transparent;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer {
+.offering-for-investor-container .offering-for-investor {
   width: 1170px;
   height: 100%;
   margin: 0 auto;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .titleAndDescriptionContainer {
+.offering-for-investor-container .offering-for-investor .offering-for-investor__title-description-wrapper {
   width: 770px;
   height: 152px;
   margin: 160px auto 60px auto;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .titleAndDescriptionContainer .titleAndDescription_title {
+.offering-for-investor-container .offering-for-investor .offering-for-investor__title-description-wrapper .offering-for-investor__title {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 64px;
-  /* identical to box height, or 133% */
   text-align: center;
   color: black;
   padding: 0;
   margin: 0;
   margin-bottom: 24px;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .titleAndDescriptionContainer .titleAndDescription_description {
+.offering-for-investor-container .offering-for-investor .offering-for-investor__title-description-wrapper .offering-for-investor__description {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
-  /* or 133% */
   text-align: center;
-  /* Grey/2 */
   color: #999999;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer {
+.offering-for-investor-container .offering-for-investor .invest-cards-container {
   width: 1170px;
   height: 1000px;
   display: grid;
@@ -244,53 +253,29 @@ body {
   grid-template-columns: 370px 370px 370px;
   grid-gap: 40px 30px;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content {
   width: 370px;
   height: 480px;
   overflow: hidden;
   /*Бэкраунд для imageContainer - сам контейнер ниже -  imageContainer*/
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardContainer_childContainer {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .card {
   position: relative;
   top: 0;
   width: 370px;
   height: 720px;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardContainer_childContainer:hover {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .card:hover {
   position: relative;
   transition: all 1s ease-in-out;
   top: -244px;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imagePathScyScrapper {
-  background-image: url(../images/investCardImg/buildingBlack.jpg);
-  background-size: cover;
-}
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imagePathKeychainHouse {
-  background-image: url(../images/investCardImg/keyChainHouse.jpg);
-  background-size: cover;
-}
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imagePathBuildingNature {
-  background-image: url(../images/investCardImg/buildingNature.jpg);
-  background-size: cover;
-}
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imagePathLaptop {
-  background-image: url(../images/investCardImg/laptopjpg.jpg);
-  background-size: cover;
-}
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imagePathOffice {
-  background-image: url(../images/investCardImg/office.jpg);
-  background-size: cover;
-}
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imagePathWheat {
-  background-image: url(../images/investCardImg/wheatField.jpg);
-  background-size: cover;
-}
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imageContainer {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .image-container {
   width: 370px;
   height: 240px;
   border-top: 1px solid transparent;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imageContainer .imageContainer_tagsContainer {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .image-container .tags-container {
   width: 322px;
   display: flex;
   justify-content: flex-start;
@@ -300,7 +285,7 @@ body {
   min-height: 50px;
   margin: 24px auto 0 24px;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .imageContainer .imageContainer_tagsContainer .imageContainer_tagsContainer_tag {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .image-container .tags-container .tags-container__tag {
   padding: 8px 12px 6px 12px;
   background: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
@@ -312,14 +297,14 @@ body {
   color: #333333;
   margin: 0;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container {
   width: 322px;
   height: 240px;
   margin: 0 auto;
   border-top: 1px solid transparent;
   border-bottom: 1px solid #ECECEC;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardTitle {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .description-and-range-container__title {
   height: 32px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -331,7 +316,7 @@ body {
   color: #333333;
   margin: 24px 0 0 0;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardCity {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .description-and-range-container__city {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -343,7 +328,7 @@ body {
   color: #999999;
   margin: 0;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardDescription {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .description-and-range-container__description {
   width: 322px;
   height: 48px;
   margin: 24px 0 0 0;
@@ -356,7 +341,7 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardEarnScaleContainer {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container {
   width: 322px;
   height: 40px;
   margin-top: 24px;
@@ -364,20 +349,20 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardEarnScaleContainer .scaleContainerBgGray {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .earn-container__range {
   height: 8px;
   width: 100%;
   background-color: #ECECEC;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardEarnScaleContainer .scaleContainerBgGray .scaleContainerBgPurple {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .earn-container__range .earn-container__scale {
   height: 100%;
   width: 58%;
   background-color: #7B61FF;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardEarnScaleContainer .cardMoney {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .money-container {
   height: 24px;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardEarnScaleContainer .cardMoney .cardMoney_purple {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .money-container .money-container__raised {
   color: #7B61FF;
   height: 24px;
   font-family: "Josefin Sans";
@@ -386,7 +371,7 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardDescriptionTitleAndRangeContainer .cardEarnScaleContainer .cardMoney .cardMoney_gray {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .money-container .money-container__raised-of {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -397,24 +382,24 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardIvestConditionsContainer {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container {
   height: 240px;
   width: 370px;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardIvestConditionsContainer .topMargin {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content--margin-top {
   margin-top: 24px !important;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardIvestConditionsContainer .cardConditions {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content {
   width: 322px;
   margin: 0 auto;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardIvestConditionsContainer .cardConditions .conditionWrapper {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content .condition-wrapper {
   height: 24px;
   margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardIvestConditionsContainer .cardConditions .conditionWrapper .condition {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content .condition-wrapper .condition-wrapper__condition {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -425,7 +410,7 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardIvestConditionsContainer .cardConditions .conditionWrapper .value {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content .condition-wrapper .condition-wrapper__value {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -436,7 +421,7 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardIvestConditionsContainer .cardViewBtn {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .investment-conditions-container__button {
   padding: 24px 40px 22px;
   margin-top: 24px;
   width: 100%;
@@ -450,11 +435,35 @@ body {
   line-height: 24px;
   color: white;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .investCardsContainer .cardContainer .cardIvestConditionsContainer .cardViewBtn:hover {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .investment-conditions-container__button:hover {
   background: #235ac7;
   cursor: pointer;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .viewAllProjectsBtn {
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--scy-scrapper {
+  background-image: url(../images/investCardImg/buildingBlack.jpg);
+  background-size: cover;
+}
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--key-chain {
+  background-image: url(../images/investCardImg/keyChainHouse.jpg);
+  background-size: cover;
+}
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--building-nature {
+  background-image: url(../images/investCardImg/buildingNature.jpg);
+  background-size: cover;
+}
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--laptop {
+  background-image: url(../images/investCardImg/laptopjpg.jpg);
+  background-size: cover;
+}
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--office {
+  background-image: url(../images/investCardImg/office.jpg);
+  background-size: cover;
+}
+.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--wheat {
+  background-image: url(../images/investCardImg/wheatField.jpg);
+  background-size: cover;
+}
+.offering-for-investor-container .offering-for-investor .invest-cards-container__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -475,12 +484,12 @@ body {
   border: 1px solid #336EE1;
   transition: all 0.2s;
 }
-.offeringForInvestorContainer .offeringForInvestorContainer_childContainer .viewAllProjectsBtn:hover {
+.offering-for-investor-container .offering-for-investor .invest-cards-container__button:hover {
   background-color: #336EE1;
   color: white;
   cursor: pointer;
 }
-.offeringForInvestorContainer .decorSpinner {
+.offering-for-investor-container .invest-cards-container__decor-spinner {
   width: 306px;
   height: 301px;
   background: url(../images/spinnerDecor.svg);
@@ -499,13 +508,13 @@ body {
   }
 }
 
-.paymantsToInvestorContainer {
+.paymants-to-investor-container {
   height: 696px;
   background: #ECF4FD;
   position: relative;
   z-index: 10;
 }
-.paymantsToInvestorContainer .paymantsToInvestorContainer_childContainer {
+.paymants-to-investor-container .paymants-to-investor-content {
   width: 1170px;
   height: 100%;
   margin: 0 auto;
@@ -517,12 +526,12 @@ body {
   position: relative;
   z-index: 10;
 }
-.paymantsToInvestorContainer .paymantsToInvestorContainer_childContainer .summOfInvestorPaids {
+.paymants-to-investor-container .paymants-to-investor-content .summ-of-paids {
   height: 376px;
   width: 570px;
   display: block;
 }
-.paymantsToInvestorContainer .paymantsToInvestorContainer_childContainer .summOfInvestorPaids .summOfInvestorPaids_title {
+.paymants-to-investor-container .paymants-to-investor-content .summ-of-paids .summ-of-paids__title {
   height: 128px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -534,7 +543,7 @@ body {
   color: #333333;
   margin: 40px 0 24px 0;
 }
-.paymantsToInvestorContainer .paymantsToInvestorContainer_childContainer .summOfInvestorPaids .summOfInvestorPaids_description {
+.paymants-to-investor-container .paymants-to-investor-content .summ-of-paids .summ-of-paids__description {
   height: 128px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -546,12 +555,12 @@ body {
   color: #999999;
   margin: 0;
 }
-.paymantsToInvestorContainer .paymantsToInvestorContainer_childContainer .chartContainer {
+.paymants-to-investor-container .paymants-to-investor-content .chart-container {
   width: 570px;
   height: 356px;
   display: block;
 }
-.paymantsToInvestorContainer .decor_roundedFigure {
+.paymants-to-investor-container .paymants-to-investor-container--decor-rounded-figure {
   height: 424px;
   width: 607.03px;
   background-image: url(../images/roundedFigure.svg);
@@ -561,19 +570,19 @@ body {
   left: 0;
   z-index: 5;
 }
-.paymantsToInvestorContainer .decor_Circle {
+.paymants-to-investor-container .paymants-to-investor-container--decor-circle {
   position: absolute;
   right: 3.89%;
   top: 0;
 }
 
-.offerForGrowCapitalContainer {
+.offer-for-grow-capital-container {
   width: 1920px;
   height: 781.38px;
   background-color: white;
   position: relative;
 }
-.offerForGrowCapitalContainer .offerForGrowCapitalContainer_childContainer {
+.offer-for-grow-capital-container .offer-for-grow-capital-content {
   width: 1170px;
   height: 100%;
   margin: 0 auto;
@@ -581,11 +590,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.offerForGrowCapitalContainer .offerForGrowCapitalContainer_childContainer .titleDescriptionAndButton {
+.offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button {
   width: 570px;
   height: 422px;
 }
-.offerForGrowCapitalContainer .offerForGrowCapitalContainer_childContainer .titleDescriptionAndButton .titleDescriptionAndButton_title {
+.offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__title {
   height: 192px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -597,7 +606,7 @@ body {
   color: #333333;
   margin-bottom: 24px;
 }
-.offerForGrowCapitalContainer .offerForGrowCapitalContainer_childContainer .titleDescriptionAndButton .titleDescriptionAndButton_description {
+.offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__description {
   height: 96px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -609,7 +618,7 @@ body {
   color: #999999;
   margin-bottom: 40px;
 }
-.offerForGrowCapitalContainer .offerForGrowCapitalContainer_childContainer .titleDescriptionAndButton .titleDescriptionAndButton_button {
+.offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -629,11 +638,11 @@ body {
   /* White */
   color: #FFFFFF;
 }
-.offerForGrowCapitalContainer .offerForGrowCapitalContainer_childContainer .titleDescriptionAndButton .titleDescriptionAndButton_button:hover {
+.offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__button:hover {
   background-color: #836eec;
   cursor: pointer;
 }
-.offerForGrowCapitalContainer .offerForGrowCapitalContainer_decorSpinner {
+.offer-for-grow-capital-container .offer-for-grow-capital-container__decorSpinner {
   width: 306px;
   height: 301px;
   background: url(../images/spinnerDecor.svg);
@@ -643,12 +652,12 @@ body {
   top: 160px;
 }
 
-.footerContainer {
+.footer-container {
   width: 1920px;
   height: 484px;
   background-color: #ECECEC;
 }
-.footerContainer .footerContainer_footer {
+.footer-container .footer-content {
   width: 1170px;
   height: 100%;
   display: flex;
@@ -659,7 +668,7 @@ body {
   /*Services*/
   /*About*/
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_nameAndCopyrightContainer {
+.footer-container .footer-content .name-copyright-content {
   width: 370px;
   height: 69px;
   display: flex;
@@ -667,7 +676,7 @@ body {
   justify-content: space-between;
   margin-right: 130px;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_nameAndCopyrightContainer .companyName {
+.footer-container .footer-content .name-copyright-content .name-copyright-content__company-name {
   height: 24px;
   text-transform: uppercase;
   font-family: "Josefin Sans";
@@ -680,7 +689,7 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_nameAndCopyrightContainer .copyright {
+.footer-container .footer-content .name-copyright-content .name-copyright-content__copyright {
   height: 15px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -692,19 +701,19 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.footerContainer .footerContainer_footer .services {
+.footer-container .footer-content .services-content {
   width: 270px;
   height: 184px;
   margin-right: 30px;
 }
-.footerContainer .footerContainer_footer .services .services_ul {
+.footer-container .footer-content .services-content .services {
   display: flex;
   height: 100%;
   width: 100%;
   flex-direction: column;
   justify-content: space-between;
 }
-.footerContainer .footerContainer_footer .services .services_ul .services_ul_firstLi {
+.footer-container .footer-content .services-content .services .services__first-li {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -714,7 +723,7 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.footerContainer .footerContainer_footer .services .services_ul li {
+.footer-container .footer-content .services-content .services li {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -725,19 +734,19 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.footerContainer .footerContainer_footer .about {
+.footer-container .footer-content .about-content {
   width: 270px;
   height: 184px;
   margin-right: 50px;
 }
-.footerContainer .footerContainer_footer .about .about_ul {
+.footer-container .footer-content .about-content .about {
   display: flex;
   height: 100%;
   width: 100%;
   flex-direction: column;
   justify-content: space-between;
 }
-.footerContainer .footerContainer_footer .about .about_ul .about_ul_firstLi {
+.footer-container .footer-content .about-content .about .about__first-li {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -747,7 +756,7 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.footerContainer .footerContainer_footer .about .about_ul li {
+.footer-container .footer-content .about-content .about li {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -758,12 +767,12 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_subscribeContainer {
+.footer-container .footer-content .subscribe-content {
   width: 370px;
   height: 103px;
   margin-top: 77px;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_subscribeContainer .subscribeContainer_title {
+.footer-container .footer-content .subscribe-content .subscribe-content__title {
   height: 36px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -775,20 +784,20 @@ body {
   color: #333333;
   margin: 0;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_subscribeContainer .emailFormContainer {
+.footer-container .footer-content .subscribe-content .email-form-content {
   height: 51px;
   width: 100%;
   margin-top: 16px;
   border-bottom: 1px solid gray;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_subscribeContainer .emailFormContainer .form {
+.footer-container .footer-content .subscribe-content .email-form-content .email-form {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_subscribeContainer .emailFormContainer .form .email {
+.footer-container .footer-content .subscribe-content .email-form-content .email-form .email-form__email {
   background-color: #ECECEC;
   height: 24px;
   border: none;
@@ -801,16 +810,16 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_subscribeContainer .emailFormContainer .form .submit {
+.footer-container .footer-content .subscribe-content .email-form-content .email-form .email-form__submit-button {
   width: 50px;
   height: 50px;
   padding: 0;
 }
-.footerContainer .footerContainer_footer .footerContainer_footer_subscribeContainer .emailFormContainer .form .submit svg {
+.footer-container .footer-content .subscribe-content .email-form-content .email-form .email-form__submit-button svg {
   padding: 0;
   margin: 0;
 }
-.footerContainer .socialMediaIcons {
+.footer-container .social-media-icons-content {
   width: 123.49px;
   height: 16px;
   display: flex;

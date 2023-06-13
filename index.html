@@ -10,590 +10,568 @@
 </head>
 <body>
     <div class="container">
-        <section class="headerContainer">
+        <section class="header-section">
             <header class="header">
-                <section class="navContainer">
-                    <p class="companyName">
+                <!--Навигация и имя компании-->
+                <section class="nav-container">
+                    <p class="nav-container__companyName nav-container__companyName--sizeDesctop">
                         next invest
-                    </p>
-                  
-                    <section class="navBlockContainer">
-                        <ul class="opportunitiesDropdown dropDownHover linksFont">
-                            <li>Investment Opportunities 
+                    </p>    
+                    <nav class="nav-block">
+                        <ul class="dropdown dropdown--large-width">
+                            <li>Investment Opportunities
                                 <svg id="svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 1L6 6L1 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                            </li> 
-                             <li class="hiddenList">For you</li>
-                              <li class="hiddenList">For you</li>
-                             <li class="hiddenList">For you</li>
-                        </ul>
-    
-                        <ul class="howItWorkDropdown dropDownHover linksFont">
+                            </li>
+                            <li class="dropdown__hidden-list">Fast growth</li> 
+                            <li class="dropdown__hidden-list">For beginners</li>
+                            <li class="dropdown__hidden-list">Regular income</li>
+                        </ul>   
+                        <ul class="dropdown dropdown--medium-width">
                             <li>How it works <svg id="svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 1L6 6L1 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg></li>
-                                
-                             <li class="hiddenList">For you</li>
-                              <li class="hiddenList">For you</li>
-                             <li class="hiddenList">For you</li>
+                                </svg></li>  
+                            <li class="dropdown__hidden-list">About invest</li> 
+                            <li class="dropdown__hidden-list">For beginners</li>
+                            <li class="dropdown__hidden-list">How long</li>
                         </ul>
-    
+                        <!--Надо не забыть добавить ссылки в списках - хотя бы якоря-->
                         <p class="linksFont">About us</p>
-
-                        <button class="login logAndRegFont ">login</button>
-                        <button class="register logAndRegFont">register</button>
-
-                    </section>
+                        <button class="login login--desctop-size logAndRegFont ">login</button>
+                        <button class="register register--desctop-size logAndRegFont">register</button>
+                    </nav>
                 </section>
-                <section class="initialInfoContainer">
-                    <div class="initialInfoContainer_initialInfo">
-                        
-                        <p class="initialInfo_title">Meaningful investments in Main Street businesses</p>
-                        <p class="initialInfo_description">Browse vetted investment offerings in communities all over the US.</p>
-                        <button class="initialInfo_button">Get started</button>
-                       
-
+                <!--Вводная инфморация-->
+                <section class="initial-info-container">
+                    <div class="initial-info">
+                        <p class="initial-info__title">Meaningful investments in Main Street businesses</p>
+                        <p class="initial-info__description">Browse vetted investment offerings in communities all over the US.</p>
+                        <button class="initial-info__button">Get started</button>
                     </div>
-
                 </section>
-                
             </header>
-            <div class="decorShape"></div>
-            <div class="backgroundDecor"></div>
-            
+            <!--Background decor for headerContainer-->
+            <div class="header-section__decorShape"></div>
+            <div class="header-section__backgroundDecor"></div>
         </section>
 
-        <section class="offeringForInvestorContainer">
-            <div class="offeringForInvestorContainer_childContainer">
-                <div class="titleAndDescriptionContainer">
-                    <p class="titleAndDescription_title">Offerings open for investment</p>
-                    <p class="titleAndDescription_description">Explore pre-vetted investment opportunities available in a growing 
+        <section class="offering-for-investor-container">
+            <div class="offering-for-investor">
+                <!--Title and description-->
+                <div class="offering-for-investor__title-description-wrapper">
+                    <p class="offering-for-investor__title">Offerings open for investment</p>
+                    <p class="offering-for-investor__description">Explore pre-vetted investment opportunities available in a growing 
                         number of industry categories.
                     </p>
                 </div>
-                <div class="investCardsContainer">
+                <!--Cards-->
+                <div class="invest-cards-container">
                     <!--Карточка-->
-                    <div class="cardContainer">
-                        <div class="cardContainer_childContainer">
-                            <div class="imageContainer imagePathScyScrapper">
-                                <div class="imageContainer_tagsContainer">
-                                    <p class="imageContainer_tagsContainer_tag">
+                    <div class="cards-content">
+                        <div class="card">
+                            <div class="image-container bg-image-path--scy-scrapper">
+                                <div class="tags-container">
+                                    <p class="tags-container__tag">
                                         house
                                     </p>
-                                    <p class="imageContainer_tagsContainer_tag">
+                                    <p class="tags-container__tag">
                                         Family Business
                                     </p>
                                 </div>
                             </div>
-                            <div class="cardDescriptionTitleAndRangeContainer">
-                                <p class="cardTitle">Oxalis</p>
-                                <p class="cardCity">Brooklyn, NY</p>
-                                <p class="cardDescription">A recognized leader in language immersion & early education, opening 
+                            <div class="description-and-range-container">
+                                <p class="description-and-range-container__title">Oxalis</p>
+                                <p class="description-and-range-container__city">Brooklyn, NY</p>
+                                <p class="description-and-range-container__description">A recognized leader in language immersion & early education, opening 
                                     second school.
                                 </p>
-                                <div class="cardEarnScaleContainer">
-                                    <div class="scaleContainerBgGray">
-                                        <div class="scaleContainerBgPurple"></div>
+                                <div class="earn-container">
+                                    <div class="earn-container__range">
+                                        <div class="earn-container__scale"></div>
                                     </div>
-                                    <div class="cardMoney">
-                                        <span class="cardMoney_purple">$574,920</span> 
-                                        <span class="cardMoney_gray">raised of $1,000,000</span>
-
-                                    </div>
-                                    
+                                    <div class="money-container">
+                                        <span class="money-container__raised">$574,920</span> 
+                                        <span class="money-container__raised-of">raised of $1,000,000</span>
+                                    </div>     
                                 </div>
-                    
                             </div>
-                            <div class="cardIvestConditionsContainer">
-                                <div class="cardConditions topMargin">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                            <div class="investment-conditions-container">
+
+                                <div class="conditions-content conditions-content--margin-top">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Security Type
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             Revenue Sharing Note
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Investment Multiple
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             1.4x
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Maturity
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             48 month
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Min. Investment
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             $100
                                         </p>
                                     </div>
                                 </div>
 
-                                <button class="cardViewBtn">view</button>
+                                <button class="investment-conditions-container__button">view</button>
 
                             </div>
                         </div>
                     </div> 
                     <!--Карточка-->
-                    <div class="cardContainer">
-                        <div class="cardContainer_childContainer">
-                            <div class="imageContainer imagePathKeychainHouse">
-                                <div class="imageContainer_tagsContainer">
-                                    <p class="imageContainer_tagsContainer_tag">
+                    <div class="cards-content">
+                        <div class="card">
+                            <div class="image-container bg-image-path--key-chain">
+                                <div class="tags-container">
+                                    <p class="tags-container__tag">
                                         house
                                     </p>
-                                    <p class="imageContainer_tagsContainer_tag">
+                                    <p class="tags-container__tag">
                                         Family Business
                                     </p>
                                 </div>
                             </div>
-                            <div class="cardDescriptionTitleAndRangeContainer">
-                                <p class="cardTitle">Oxalis</p>
-                                <p class="cardCity">Brooklyn, NY</p>
-                                <p class="cardDescription">A recognized leader in language immersion & early education, opening 
+                            <div class="description-and-range-container">
+                                <p class="description-and-range-container__title">Oxalis</p>
+                                <p class="description-and-range-container__city">Brooklyn, NY</p>
+                                <p class="description-and-range-container__description">A recognized leader in language immersion & early education, opening 
                                     second school.
                                 </p>
-                                <div class="cardEarnScaleContainer">
-                                    <div class="scaleContainerBgGray">
-                                        <div class="scaleContainerBgPurple"></div>
+                                <div class="earn-container">
+                                    <div class="earn-container__range">
+                                        <div class="earn-container__scale"></div>
                                     </div>
-                                    <div class="cardMoney">
-                                        <span class="cardMoney_purple">$574,920</span> 
-                                        <span class="cardMoney_gray">raised of $1,000,000</span>
-
-                                    </div>
-                                    
+                                    <div class="money-container">
+                                        <span class="money-container__raised">$574,920</span> 
+                                        <span class="money-container__raised-of">raised of $1,000,000</span>
+                                    </div>     
                                 </div>
-                    
                             </div>
-                            <div class="cardIvestConditionsContainer">
-                                <div class="cardConditions topMargin">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                            <div class="investment-conditions-container">
+
+                                <div class="conditions-content conditions-content--margin-top">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Security Type
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             Revenue Sharing Note
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Investment Multiple
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             1.4x
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Maturity
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             48 month
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Min. Investment
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             $100
                                         </p>
                                     </div>
                                 </div>
 
-                                <button class="cardViewBtn">view</button>
+                                <button class="investment-conditions-container__button">view</button>
 
                             </div>
                         </div>
-                    </div>   
+                    </div>    
                     <!--Карточка-->
-                    <div class="cardContainer">
-                        <div class="cardContainer_childContainer">
-                            <div class="imageContainer imagePathBuildingNature">
-                                <div class="imageContainer_tagsContainer">
-                                    <p class="imageContainer_tagsContainer_tag">
+                    <div class="cards-content">
+                        <div class="card">
+                            <div class="image-container bg-image-path--building-nature">
+                                <div class="tags-container">
+                                    <p class="tags-container__tag">
                                         house
                                     </p>
-                                    <p class="imageContainer_tagsContainer_tag">
+                                    <p class="tags-container__tag">
                                         Family Business
                                     </p>
                                 </div>
                             </div>
-                            <div class="cardDescriptionTitleAndRangeContainer">
-                                <p class="cardTitle">Oxalis</p>
-                                <p class="cardCity">Brooklyn, NY</p>
-                                <p class="cardDescription">A recognized leader in language immersion & early education, opening 
+                            <div class="description-and-range-container">
+                                <p class="description-and-range-container__title">Oxalis</p>
+                                <p class="description-and-range-container__city">Brooklyn, NY</p>
+                                <p class="description-and-range-container__description">A recognized leader in language immersion & early education, opening 
                                     second school.
                                 </p>
-                                <div class="cardEarnScaleContainer">
-                                    <div class="scaleContainerBgGray">
-                                        <div class="scaleContainerBgPurple"></div>
+                                <div class="earn-container">
+                                    <div class="earn-container__range">
+                                        <div class="earn-container__scale"></div>
                                     </div>
-                                    <div class="cardMoney">
-                                        <span class="cardMoney_purple">$574,920</span> 
-                                        <span class="cardMoney_gray">raised of $1,000,000</span>
-
-                                    </div>
-                                    
+                                    <div class="money-container">
+                                        <span class="money-container__raised">$574,920</span> 
+                                        <span class="money-container__raised-of">raised of $1,000,000</span>
+                                    </div>     
                                 </div>
-                    
                             </div>
-                            <div class="cardIvestConditionsContainer">
-                                <div class="cardConditions topMargin">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                            <div class="investment-conditions-container">
+
+                                <div class="conditions-content conditions-content--margin-top">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Security Type
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             Revenue Sharing Note
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Investment Multiple
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             1.4x
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Maturity
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             48 month
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Min. Investment
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             $100
                                         </p>
                                     </div>
                                 </div>
 
-                                <button class="cardViewBtn">view</button>
+                                <button class="investment-conditions-container__button">view</button>
 
                             </div>
                         </div>
-                    </div>   
+                    </div> 
                     <!--Карточка-->
-                    <div class="cardContainer">
-                        <div class="cardContainer_childContainer">
-                            <div class="imageContainer imagePathLaptop">
-                                <div class="imageContainer_tagsContainer">
-                                    <p class="imageContainer_tagsContainer_tag">
+                    <div class="cards-content">
+                        <div class="card">
+                            <div class="image-container bg-image-path--laptop">
+                                <div class="tags-container">
+                                    <p class="tags-container__tag">
                                         house
                                     </p>
-                                    <p class="imageContainer_tagsContainer_tag">
+                                    <p class="tags-container__tag">
                                         Family Business
                                     </p>
                                 </div>
                             </div>
-                            <div class="cardDescriptionTitleAndRangeContainer">
-                                <p class="cardTitle">Oxalis</p>
-                                <p class="cardCity">Brooklyn, NY</p>
-                                <p class="cardDescription">A recognized leader in language immersion & early education, opening 
+                            <div class="description-and-range-container">
+                                <p class="description-and-range-container__title">Oxalis</p>
+                                <p class="description-and-range-container__city">Brooklyn, NY</p>
+                                <p class="description-and-range-container__description">A recognized leader in language immersion & early education, opening 
                                     second school.
                                 </p>
-                                <div class="cardEarnScaleContainer">
-                                    <div class="scaleContainerBgGray">
-                                        <div class="scaleContainerBgPurple"></div>
+                                <div class="earn-container">
+                                    <div class="earn-container__range">
+                                        <div class="earn-container__scale"></div>
                                     </div>
-                                    <div class="cardMoney">
-                                        <span class="cardMoney_purple">$574,920</span> 
-                                        <span class="cardMoney_gray">raised of $1,000,000</span>
-
-                                    </div>
-                                    
+                                    <div class="money-container">
+                                        <span class="money-container__raised">$574,920</span> 
+                                        <span class="money-container__raised-of">raised of $1,000,000</span>
+                                    </div>     
                                 </div>
-                    
                             </div>
-                            <div class="cardIvestConditionsContainer">
-                                <div class="cardConditions topMargin">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                            <div class="investment-conditions-container">
+
+                                <div class="conditions-content conditions-content--margin-top">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Security Type
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             Revenue Sharing Note
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Investment Multiple
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             1.4x
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Maturity
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             48 month
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Min. Investment
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             $100
                                         </p>
                                     </div>
                                 </div>
 
-                                <button class="cardViewBtn">view</button>
+                                <button class="investment-conditions-container__button">view</button>
 
                             </div>
                         </div>
-                    </div>   
+                    </div>  
                     <!--Карточка-->
-                    <div class="cardContainer">
-                        <div class="cardContainer_childContainer">
-                            <div class="imageContainer imagePathOffice">
-                                <div class="imageContainer_tagsContainer">
-                                    <p class="imageContainer_tagsContainer_tag">
+                    <div class="cards-content">
+                        <div class="card">
+                            <div class="image-container bg-image-path--office">
+                                <div class="tags-container">
+                                    <p class="tags-container__tag">
                                         house
                                     </p>
-                                    <p class="imageContainer_tagsContainer_tag">
+                                    <p class="tags-container__tag">
                                         Family Business
                                     </p>
                                 </div>
                             </div>
-                            <div class="cardDescriptionTitleAndRangeContainer">
-                                <p class="cardTitle">Oxalis</p>
-                                <p class="cardCity">Brooklyn, NY</p>
-                                <p class="cardDescription">A recognized leader in language immersion & early education, opening 
+                            <div class="description-and-range-container">
+                                <p class="description-and-range-container__title">Oxalis</p>
+                                <p class="description-and-range-container__city">Brooklyn, NY</p>
+                                <p class="description-and-range-container__description">A recognized leader in language immersion & early education, opening 
                                     second school.
                                 </p>
-                                <div class="cardEarnScaleContainer">
-                                    <div class="scaleContainerBgGray">
-                                        <div class="scaleContainerBgPurple"></div>
+                                <div class="earn-container">
+                                    <div class="earn-container__range">
+                                        <div class="earn-container__scale"></div>
                                     </div>
-                                    <div class="cardMoney">
-                                        <span class="cardMoney_purple">$574,920</span> 
-                                        <span class="cardMoney_gray">raised of $1,000,000</span>
-
-                                    </div>
-                                    
+                                    <div class="money-container">
+                                        <span class="money-container__raised">$574,920</span> 
+                                        <span class="money-container__raised-of">raised of $1,000,000</span>
+                                    </div>     
                                 </div>
-                    
                             </div>
-                            <div class="cardIvestConditionsContainer">
-                                <div class="cardConditions topMargin">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                            <div class="investment-conditions-container">
+
+                                <div class="conditions-content conditions-content--margin-top">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Security Type
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             Revenue Sharing Note
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Investment Multiple
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             1.4x
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Maturity
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             48 month
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Min. Investment
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             $100
                                         </p>
                                     </div>
                                 </div>
 
-                                <button class="cardViewBtn">view</button>
+                                <button class="investment-conditions-container__button">view</button>
 
                             </div>
                         </div>
-                    </div>   
+                    </div> 
                     <!--Карточка-->
-                    <div class="cardContainer">
-                        <div class="cardContainer_childContainer">
-                            <div class="imageContainer imagePathWheat">
-                                <div class="imageContainer_tagsContainer">
-                                    <p class="imageContainer_tagsContainer_tag">
+                    <div class="cards-content">
+                        <div class="card">
+                            <div class="image-container bg-image-path--wheat">
+                                <div class="tags-container">
+                                    <p class="tags-container__tag">
                                         house
                                     </p>
-                                    <p class="imageContainer_tagsContainer_tag">
+                                    <p class="tags-container__tag">
                                         Family Business
                                     </p>
                                 </div>
                             </div>
-                            <div class="cardDescriptionTitleAndRangeContainer">
-                                <p class="cardTitle">Oxalis</p>
-                                <p class="cardCity">Brooklyn, NY</p>
-                                <p class="cardDescription">A recognized leader in language immersion & early education, opening 
+                            <div class="description-and-range-container">
+                                <p class="description-and-range-container__title">Oxalis</p>
+                                <p class="description-and-range-container__city">Brooklyn, NY</p>
+                                <p class="description-and-range-container__description">A recognized leader in language immersion & early education, opening 
                                     second school.
                                 </p>
-                                <div class="cardEarnScaleContainer">
-                                    <div class="scaleContainerBgGray">
-                                        <div class="scaleContainerBgPurple"></div>
+                                <div class="earn-container">
+                                    <div class="earn-container__range">
+                                        <div class="earn-container__scale"></div>
                                     </div>
-                                    <div class="cardMoney">
-                                        <span class="cardMoney_purple">$574,920</span> 
-                                        <span class="cardMoney_gray">raised of $1,000,000</span>
-
-                                    </div>
-                                    
+                                    <div class="money-container">
+                                        <span class="money-container__raised">$574,920</span> 
+                                        <span class="money-container__raised-of">raised of $1,000,000</span>
+                                    </div>     
                                 </div>
-                    
                             </div>
-                            <div class="cardIvestConditionsContainer">
-                                <div class="cardConditions topMargin">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                            <div class="investment-conditions-container">
+
+                                <div class="conditions-content conditions-content--margin-top">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Security Type
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             Revenue Sharing Note
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Investment Multiple
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             1.4x
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Maturity
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             48 month
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="cardConditions">
-                                    <div class="conditionWrapper">
-                                        <p class="condition">
+                                <div class="conditions-content">
+                                    <div class="condition-wrapper">
+                                        <p class="condition-wrapper__condition">
                                             Min. Investment
                                         </p>
-                                        <p class="value">
+                                        <p class="condition-wrapper__value">
                                             $100
                                         </p>
                                     </div>
                                 </div>
 
-                                <button class="cardViewBtn">view</button>
+                                <button class="investment-conditions-container__button">view</button>
 
                             </div>
                         </div>
                     </div>                                        
                 </div>
-                <button class="viewAllProjectsBtn">view all projects</button>
+                <button class="invest-cards-container__button">view all projects</button>
             </div>
-            <div class="decorSpinner"> 
+            <div class="invest-cards-container__decor-spinner"> 
             </div>
             
         </section>
 
-
-        <section class="paymantsToInvestorContainer">
-            <div class="paymantsToInvestorContainer_childContainer">
-                <div class="summOfInvestorPaids">
-                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!--Paymants to investor - third block-->
+        <section class="paymants-to-investor-container">
+            <div class="paymants-to-investor-content">
+                <div class="summ-of-paids">
+                    <!--<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 31.0776 0.496524 34.0392 1.41384 36.8091L9.1415 30.0474C9.34243 29.8716 9.60532 29.7835 9.87161 29.8026C10.1379 29.8217 10.3855 29.9465 10.5593 30.1492L18.2763 39.1524L40.9582 17.7306L34.3751 17.5426C33.8231 17.5268 33.3883 17.0665 33.4041 16.5144C33.4199 15.9623 33.8802 15.5276 34.4322 15.5434L43.4286 15.8004C43.9806 15.8162 44.4154 16.2765 44.3996 16.8286L44.1426 25.8249C44.1268 26.377 43.6665 26.8117 43.1144 26.7959C42.5623 26.7802 42.1276 26.3198 42.1434 25.7678L42.3315 19.1847L18.8866 41.327C18.6877 41.5149 18.4206 41.613 18.1474 41.5986C17.8742 41.5842 17.6188 41.4585 17.4407 41.2508L9.69822 32.2178L2.16333 38.8109C6.39298 48.9073 16.3682 56 28 56Z" fill="#7B61FF"/>
-                        </svg>
-                        <p class="summOfInvestorPaids_title">
+                    </svg>-->
+                    <p class="summ-of-paids__title">
                             $7M+ paid out to investors
-                        </p>
+                    </p>
 
-                        <p class="summOfInvestorPaids_description">Next Invest has already paid out over $7M in cash returns to investors. 
+                    <p class="summ-of-paids__description">Next Invest has already paid out over $7M in cash returns to investors. 
                             Earn potential cash payments through unique revenue-share and debt financing investments.
-                        </p>
-
-                        
-                        
-
+                    </p>
                 </div>
 
-                <div class="chartContainer">
+                <div class="chart-container">
                     <!--width="570" height="335" viewBox="0 0 535 356"-->
                     <svg width="570" height="356" viewBox="0 0 570 356" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="100.5" y="0.5" width="117" height="297" stroke="#ECECEC"/>
@@ -637,38 +615,36 @@
                         <rect width="470" height="284.109" fill="white" transform="matrix(-1 0 0 1 570 55.8906)"/>
                         </clipPath>
                         </defs>
-                        </svg>
-                        
-            </div>
+                        </svg>          
+                </div>
             </div>
 
-            <div class="decor_roundedFigure"></div>
-            <div class="decor_Circle">
+            <div class="paymants-to-investor-container--decor-rounded-figure"></div>
+            <div class="paymants-to-investor-container--decor-circle">
                 <svg width="149" height="75" viewBox="0 0 149 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M74.18 74.36C33.28 74.36 0 41.08 0 0.18C0 -40.72 33.28 -74 74.18 -74C115.08 -74 148.36 -40.72 148.36 0.18C148.35 41.08 115.08 74.36 74.18 74.36ZM74.18 -70.81C35.03 -70.81 3.18997 -38.96 3.18997 0.18C3.18997 39.33 35.04 71.17 74.18 71.17C113.32 71.17 145.17 39.32 145.17 0.18C145.17 -38.96 113.32 -70.81 74.18 -70.81Z" fill="#7B61FF"/>
                     <path d="M74.1799 63.9901C38.9999 63.9901 10.3699 35.3701 10.3699 0.180115C10.3699 -34.9999 38.9899 -63.6299 74.1799 -63.6299C109.36 -63.6299 137.99 -35.0099 137.99 0.180115C137.98 35.3701 109.36 63.9901 74.1799 63.9901ZM74.1799 -60.4399C40.7499 -60.4399 13.5599 -33.2399 13.5599 0.180115C13.5599 33.6101 40.7599 60.8001 74.1799 60.8001C107.6 60.8001 134.8 33.6001 134.8 0.180115C134.8 -33.2399 107.6 -60.4399 74.1799 -60.4399Z" fill="#7B61FF"/>
                     <path d="M74.18 53.62C44.71 53.62 20.74 29.65 20.74 0.179993C20.74 -29.29 44.71 -53.26 74.18 -53.26C103.65 -53.26 127.62 -29.29 127.62 0.179993C127.61 29.65 103.64 53.62 74.18 53.62ZM74.18 -50.07C46.47 -50.07 23.93 -27.53 23.93 0.179993C23.93 27.89 46.47 50.44 74.18 50.44C101.89 50.44 124.43 27.9 124.43 0.179993C124.43 -27.53 101.89 -50.07 74.18 -50.07Z" fill="#7B61FF"/>
                     <path d="M74.1801 43.2501C50.4301 43.2501 31.1101 23.9301 31.1101 0.180107C31.1101 -23.5699 50.4301 -42.8899 74.1801 -42.8899C97.9301 -42.8899 117.25 -23.5699 117.25 0.180107C117.25 23.9301 97.9201 43.2501 74.1801 43.2501ZM74.1801 -39.6999C52.1901 -39.6999 34.2901 -21.8099 34.2901 0.190109C34.2901 22.1801 52.1801 40.0801 74.1801 40.0801C96.1801 40.0801 114.07 22.1901 114.07 0.190109C114.06 -21.8099 96.1701 -39.6999 74.1801 -39.6999Z" fill="#7B61FF"/>
-                    </svg>
-            </div>
-                  
+                </svg>
+            </div>      
         </section>
-
-        <section class="offerForGrowCapitalContainer">
-            <div class="offerForGrowCapitalContainer_childContainer">
-                <div class="titleDescriptionAndButton">
-                    <p class="titleDescriptionAndButton_title">
+        <!--Offering for grow capital - fourth block-->
+        <section class="offer-for-grow-capital-container">
+            <div class="offer-for-grow-capital-content">
+                <div class="title-description-button">
+                    <p class="title-description-button__title">
                         Looking to raise capital
                         for your growing business?
                     </p>
-                    <p class="titleDescriptionAndButton_description">
+                    <p class="title-description-button__description">
                         Whether expanding or opening a brand-new concept, we make it easy 
                         to raise money from thousands of local investors.
                     </p>
-                    <button class="titleDescriptionAndButton_button">apply online</button>
+                    <button class="title-description-button__button">apply online</button>
                 </div>
 
-                <div class="moneyGrowsImage">
+                <div class="offer-for-grow-capital-container__money-grow-img-content">
                     <svg width="470" height="462" viewBox="0 0 470 462" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M309.934 303.423H284.54V402.482H309.934V303.423Z" fill="#EBEBEB"/>
                     <path d="M309.934 407.371H284.54V423.682H309.934V407.371Z" fill="#EBEBEB"/>
@@ -1308,33 +1284,29 @@
                     <path opacity="0.7" d="M364.286 25.8687L366.361 22.6241L362.51 22.4475L364.286 25.8687Z" fill="white"/>
                     </g>
                     </svg>
-                </div>
-                    
-
+                </div>             
             </div>
-
-            <div class="offerForGrowCapitalContainer_decorSpinner"> 
+            <div class="offer-for-grow-capital-container__decorSpinner"> 
             </div>
-
         </section>
+        <!--Footer - fifth block-->
+        <section class="footer-container">
+            <footer class="footer-content">
 
-        <section class="footerContainer">
-            <footer class="footerContainer_footer">
-
-                <div class="footerContainer_footer_nameAndCopyrightContainer">
-                    <p class="companyName">
+                <div class="name-copyright-content">
+                    <p class="name-copyright-content__company-name">
                         next invest
                     </p>
 
-                    <p class="copyright">
+                    <p class="name-copyright-content__copyright">
                         Copyright © 2020. LogoIpsum. All rights reserved.
                     </p>
 
                 </div>
 
-                <div class="services">
-                    <ul class="services_ul">
-                        <li class="services_ul_firstLi">Services</li>
+                <div class="services-content">
+                    <ul class="services">
+                        <li class="services__first-li">Services</li>
                         <li>Email Marketing</li>
                         <li>Campaigns</li>
                         <li>Branding</li>
@@ -1342,9 +1314,9 @@
                     </ul> 
                 </div>
 
-                <div class="about">
-                    <ul class="about_ul">
-                        <li class="about_ul_firstLi">About</li>
+                <div class="about-content">
+                    <ul class="about">
+                        <li class="about__first-li">About</li>
                         <li>Our Story</li>
                         <li>Benefits</li>
                         <li>Team</li>
@@ -1360,13 +1332,13 @@
                 </href>
 
                 <!--Подписка/мыло-->
-                <div class="footerContainer_footer_subscribeContainer">
-                    <p class="subscribeContainer_title">Subscribe to our newsletter</p>
-                    <div class="emailFormContainer">
-                        <form class="form" action="">
-                            <input class="email" type="email" placeholder="Email adress">
+                <div class="subscribe-content">
+                    <p class="subscribe-content__title">Subscribe to our newsletter</p>
+                    <div class="email-form-content">
+                        <form class="email-form" action="">
+                            <input class="email-form__email" type="email" placeholder="Email adress">
 
-                            <button class="submit" type="submit">
+                            <button class="email-form__submit-button" type="submit">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 8C0 3.58172 3.58172 0 8 0H42C46.4183 0 50 3.58172 50 8V50H0V8Z" fill="#336EE1"/>
                                     <path d="M22 17.5L29.5 25L22 32.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1378,7 +1350,7 @@
 
                 </div>  
 
-                <div class="socialMediaIcons">
+                <div class="social-media-icons-content">
                     <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.4893 2.69808H7.93865V0.173805C7.6886 0.139407 6.82865 0.0620117 5.82714 0.0620117C3.73747 0.0620117 2.30598 1.37641 2.30598 3.7922V6.0155H0V8.83745H2.30598V15.938H5.13323V8.83811H7.34594L7.6972 6.01616H5.13257V4.07202C5.13323 3.25639 5.35285 2.69808 6.4893 2.69808Z" fill="#333333"/>
                     </svg>
@@ -1393,21 +1365,8 @@
                         <circle cx="12.7942" cy="3.69999" r="0.533" fill="#333333"/>
                     </svg>
                 </div>
-                
             </footer>
-        </section>
-        
-        
-        
-    </div>
-
-    
-
-    
-        
-       
-   
-
-    
+        </section>   
+    </div> 
 </body>
 </html>

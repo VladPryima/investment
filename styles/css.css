@@ -7,13 +7,24 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: #ACDBDF;
+  margin: 0 auto;
 }
 
 .container {
-  width: 1920px;
+  max-width: 1920px;
   height: 4513px;
   position: relative;
   margin: 0 auto;
@@ -21,26 +32,28 @@ body {
 }
 
 /*Контейнер для первого блока - навигации и вводной инормации*/
-.header-section {
+.header-container {
   height: 870px;
+  position: relative;
   background-color: black;
-  background-image: url(../images/skyScrapper.jpg);
-  background-position: top 2380px left 0px;
+  background-image: url(../images/sky-scrapper-cut.jpg);
+  background-position: top 50% left 0;
   background-size: cover;
+  background-repeat: no-repeat;
   /*bg декор для хэдэра*/
 }
-.header-section .header {
+.header-container .header {
   width: 1170px;
   margin: 0 auto;
   height: inherit;
 }
-.header-section .header .nav-container {
+.header-container .header .nav-container {
   height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header-section .header .nav-container .nav-container__companyName {
+.header-container .header .nav-container .nav-container__companyName {
   text-transform: uppercase;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -48,13 +61,13 @@ body {
   letter-spacing: 0.06em;
   color: #FFFFFF;
 }
-.header-section .header .nav-container .nav-container__companyName--sizeDesctop {
+.header-container .header .nav-container .nav-container__companyName--sizeDesctop {
   width: 185px;
   height: 24px;
   font-size: 24px;
   line-height: 24px;
 }
-.header-section .header .nav-container .nav-block {
+.header-container .header .nav-container .nav-block {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,7 +77,7 @@ body {
   height: 54px;
   font-family: "Josefin Sans";
 }
-.header-section .header .nav-container .nav-block .dropdown {
+.header-container .header .nav-container .nav-block .dropdown {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -72,27 +85,27 @@ body {
   line-height: 24px;
   color: #FFFFFF;
 }
-.header-section .header .nav-container .nav-block .dropdown--large-width {
+.header-container .header .nav-container .nav-block .dropdown--large-width {
   width: 216px;
 }
-.header-section .header .nav-container .nav-block .dropdown--medium-width {
+.header-container .header .nav-container .nav-block .dropdown--medium-width {
   width: 117px;
 }
-.header-section .header .nav-container .nav-block .dropdown__hidden-list {
+.header-container .header .nav-container .nav-block .dropdown__hidden-list {
   display: none;
 }
-.header-section .header .nav-container .nav-block .dropdown:hover {
+.header-container .header .nav-container .nav-block .dropdown:hover {
   position: relative;
   z-index: 10;
   top: 36px;
   cursor: pointer;
   overflow: visible;
 }
-.header-section .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list {
+.header-container .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list {
   display: block;
   position: relative;
 }
-.header-section .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list:hover::after {
+.header-container .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list:hover::after {
   content: url(../images/carete-down.svg);
   transform: rotate(90deg);
   display: inline-block;
@@ -100,41 +113,41 @@ body {
   right: 0;
   top: 0;
 }
-.header-section .header .nav-container .nav-block .login {
+.header-container .header .nav-container .nav-block .login {
   background-color: #7B61FF;
   color: white;
   text-transform: uppercase;
   transition: all 0.2s;
 }
-.header-section .header .nav-container .nav-block .login--desctop-size {
+.header-container .header .nav-container .nav-block .login--desctop-size {
   width: 135px;
   height: 54px;
   margin: 0;
 }
-.header-section .header .nav-container .nav-block .login:hover {
+.header-container .header .nav-container .nav-block .login:hover {
   background-color: #836eec;
   cursor: pointer;
 }
-.header-section .header .nav-container .nav-block .register {
+.header-container .header .nav-container .nav-block .register {
   color: #7B61FF;
   margin: 0;
   text-transform: uppercase;
 }
-.header-section .header .nav-container .nav-block .register--desctop-size {
+.header-container .header .nav-container .nav-block .register--desctop-size {
   width: 160px;
   height: 54px;
 }
-.header-section .header .nav-container .nav-block .register:hover {
+.header-container .header .nav-container .nav-block .register:hover {
   background-color: #f2e7f3;
   cursor: pointer;
 }
-.header-section .header .nav-container .nav-block .logAndRegFont {
+.header-container .header .nav-container .nav-block .logAndRegFont {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
 }
-.header-section .header .nav-container .nav-block .linksFont {
+.header-container .header .nav-container .nav-block .linksFont {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -142,17 +155,17 @@ body {
   line-height: 24px;
   color: #FFFFFF;
 }
-.header-section .header .initial-info-container {
+.header-container .header .initial-info-container {
   height: 780px;
   position: relative;
   z-index: 5;
 }
-.header-section .header .initial-info-container .initial-info {
+.header-container .header .initial-info-container .initial-info {
   width: 770px;
   height: 374px;
   margin-top: 231px;
 }
-.header-section .header .initial-info-container .initial-info .initial-info__title {
+.header-container .header .initial-info-container .initial-info .initial-info__title {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -162,7 +175,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.header-section .header .initial-info-container .initial-info .initial-info__description {
+.header-container .header .initial-info-container .initial-info .initial-info__description {
   width: 470px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -170,7 +183,7 @@ body {
   font-size: 24px;
   line-height: 32px;
 }
-.header-section .header .initial-info-container .initial-info .initial-info__button {
+.header-container .header .initial-info-container .initial-info .initial-info__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -185,18 +198,21 @@ body {
   color: white;
   cursor: pointer;
 }
-.header-section .header .initial-info-container .initial-info .initial-info__button:hover {
+.header-container .header .initial-info-container .initial-info .initial-info__button:hover {
   background-color: #836eec;
 }
-.header-section .header-section__backgroundDecor {
+.header-container .header-container__decor-sharp-lines {
   position: absolute;
-  width: 554px;
-  height: 554px;
-  left: 1366px;
+  width: 28.85%;
+  height: 63.67%;
+  right: 0;
   top: 316px;
   background-image: url(../images/headerSharpLinesc.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
 }
-.header-section .header-section__decorShape {
+.header-container .header-container__decorShape {
   width: 558px;
   height: 558px;
   border-radius: 100%;
@@ -209,7 +225,6 @@ body {
 
 .offering-for-investor-container {
   height: 1680px;
-  width: 1920px;
   background-color: #FFFFFF;
   position: relative;
   border-top: 1px solid transparent;
@@ -442,26 +457,32 @@ body {
 .offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--scy-scrapper {
   background-image: url(../images/investCardImg/buildingBlack.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--key-chain {
   background-image: url(../images/investCardImg/keyChainHouse.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--building-nature {
   background-image: url(../images/investCardImg/buildingNature.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--laptop {
   background-image: url(../images/investCardImg/laptopjpg.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--office {
   background-image: url(../images/investCardImg/office.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--wheat {
   background-image: url(../images/investCardImg/wheatField.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor .invest-cards-container__button {
   display: flex;
@@ -577,7 +598,7 @@ body {
 }
 
 .offer-for-grow-capital-container {
-  width: 1920px;
+  max-width: 1920px;
   height: 781.38px;
   background-color: white;
   position: relative;
@@ -653,7 +674,6 @@ body {
 }
 
 .footer-container {
-  width: 1920px;
   height: 484px;
   background-color: #ECECEC;
 }

@@ -37,19 +37,20 @@ body {
   position: relative;
   background-color: black;
   background-image: url(../images/sky-scrapper-cut.jpg);
-  background-position: top 50% left 0;
   background-size: cover;
   background-repeat: no-repeat;
   /*bg декор для хэдэра*/
+  /*Убрать декор шарп лайнс если укран меньше 1280px*/
 }
 .header-container .header {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   height: inherit;
 }
 .header-container .header .nav-container {
   height: 90px;
   display: flex;
+  margin: 0 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -156,14 +157,14 @@ body {
   color: #FFFFFF;
 }
 .header-container .header .initial-info-container {
-  height: 780px;
   position: relative;
   z-index: 5;
+  margin-top: 231px;
 }
 .header-container .header .initial-info-container .initial-info {
   width: 770px;
   height: 374px;
-  margin-top: 231px;
+  margin: 0 10px;
 }
 .header-container .header .initial-info-container .initial-info .initial-info__title {
   font-family: "Josefin Sans";
@@ -174,6 +175,8 @@ body {
   color: white;
   padding: 0;
   margin: 0;
+  position: relative;
+  z-index: 5;
 }
 .header-container .header .initial-info-container .initial-info .initial-info__description {
   width: 470px;
@@ -182,6 +185,8 @@ body {
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
+  position: relative;
+  z-index: 5;
 }
 .header-container .header .initial-info-container .initial-info .initial-info__button {
   display: flex;
@@ -196,31 +201,37 @@ body {
   font-family: "Josefin Sans";
   text-transform: uppercase;
   color: white;
+  position: relative;
+  z-index: 5;
   cursor: pointer;
 }
 .header-container .header .initial-info-container .initial-info .initial-info__button:hover {
   background-color: #836eec;
 }
-.header-container .header-container__decor-sharp-lines {
-  position: absolute;
-  width: 28.85%;
-  height: 63.67%;
-  right: 0;
-  top: 316px;
-  background-image: url(../images/headerSharpLinesc.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 1px solid black;
-}
-.header-container .header-container__decorShape {
+.header-container .header .initial-info-container .initial-info .initial-info__decor-shape {
   width: 558px;
   height: 558px;
   border-radius: 100%;
   background-color: rgba(51, 110, 225, 0.5);
   position: absolute;
-  z-index: 0;
-  left: 227px;
-  top: 180px;
+  z-index: 1;
+  left: -12.75%;
+  top: -37.75%;
+}
+.header-container .header-container__decor-sharp-lines {
+  position: absolute;
+  width: 28.85%;
+  padding-top: 28.85%;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/headerSharpLinesc.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1280px) {
+  .header-container .header-container__decor-sharp-lines {
+    display: none;
+  }
 }
 
 .offering-for-investor-container {
@@ -230,7 +241,7 @@ body {
   border-top: 1px solid transparent;
 }
 .offering-for-investor-container .offering-for-investor {
-  width: 1170px;
+  max-width: 1170px;
   height: 100%;
   margin: 0 auto;
 }
@@ -261,7 +272,8 @@ body {
   color: #999999;
 }
 .offering-for-investor-container .offering-for-investor .invest-cards-container {
-  width: 1170px;
+  max-width: 1170px;
+  margin: 5px 0 0 5px;
   height: 1000px;
   display: grid;
   grid-template-rows: 480px 480px;
@@ -511,14 +523,15 @@ body {
   cursor: pointer;
 }
 .offering-for-investor-container .invest-cards-container__decor-spinner {
-  width: 306px;
-  height: 301px;
+  width: 15.9375%;
+  padding-top: 15.9375%;
   background: url(../images/spinnerDecor.svg);
   background-size: cover;
   position: absolute;
   left: 40px;
   top: 35.5%;
   animation: spinner 20s linear infinite;
+  border: 1px solid black;
 }
 @keyframes spinner {
   from {

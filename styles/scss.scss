@@ -55,20 +55,20 @@ body {
     //background-position: top 2535px left -70px;
     //background-size: 110%;
     //background-position: top 2380px left 0px;
-    background-position: top 50% left 0;
+    //background-position: top 45% left 0;
+    //background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
     
     .header {
-        width: 1170px;
+        max-width: 1170px;
         margin: 0 auto;
         height: inherit;
-        
-        
-        
+
         .nav-container {
             height: 90px;
             display: flex;
+            margin: 0 10px;
             justify-content: space-between;
             align-items: center;
             
@@ -193,13 +193,16 @@ body {
         }
         //Вводная информация
         .initial-info-container {
-            height: 780px;
+            //height: 780px;
             position: relative;
             z-index: 5;
+            margin-top: 231px;
             .initial-info {
                 width: 770px;
                 height: 374px;
-                margin-top: 231px;
+                margin: 0 10px;
+                
+             
                 .initial-info__title {
                     font-family: 'Josefin Sans';
                     font-style: normal;
@@ -209,6 +212,8 @@ body {
                     color: white;
                     padding: 0;
                     margin: 0;
+                    position: relative;
+                    z-index: 5;
                 }
                 .initial-info__description {
                     width: 470px;
@@ -217,6 +222,8 @@ body {
                     font-weight: 400;
                     font-size: 24px;
                     line-height: 32px;
+                    position: relative;
+                    z-index: 5;
                 }
                 .initial-info__button {
                     display: flex;
@@ -233,14 +240,25 @@ body {
                     font-family: 'Josefin Sans';
                     text-transform: uppercase;
                     color: white;
+                    position: relative;
+                    z-index: 5;
 
                     cursor: pointer;
                 }
                 .initial-info__button:hover {
                     background-color: $purpleLighter;
                 }
-              
-                
+        
+                .initial-info__decor-shape {
+                    width: 558px;
+                    height: 558px;
+                    border-radius: 100%;
+                    background-color: rgba(51, 110, 225, 0.5);
+                    position: absolute;
+                    z-index: 1;
+                    left: -12.75%;  //227px 1869px - последнее значение, при котором надпись в центре, 1661 - уголком кнопка касается
+                    top: -37.75%;
+                }
             }
         }
     }
@@ -250,27 +268,24 @@ body {
                 
                 position: absolute;
                 width: 28.85%; //554px
-                height: 63.67%; //554px
+                //height: 63.67%; //554px
                 //left: 71.145%; //1366px
+                padding-top: 28.85%;
                 right: 0; //instead of `left`
-                top: 316px;
+                //top: 36.321%; //316px
+                bottom: 0;
                 background-image: url(../images/headerSharpLinesc.png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 
-                border: 1px solid black;
             }
-            .header-container__decorShape {
-                width: 558px;
-                height: 558px;
-                border-radius: 100%;
-                background-color: rgba(51, 110, 225, 0.5);;
-                position: absolute;
-                z-index: 0;
-                left: 227px;  //227px
-                top: 180px;
+            /*Убрать декор шарп лайнс если укран меньше 1280px*/
+            @media screen and (max-width: 1280px) {
+                .header-container__decor-sharp-lines {
+                    display: none;
+                }
+                
             }
-    
 }
 
 .offering-for-investor-container {
@@ -280,7 +295,7 @@ body {
     position: relative; //Для фигуры спинера 
     border-top: 1px solid transparent; //Для марджина
     .offering-for-investor {
-        width: 1170px;
+        max-width: 1170px;
         height: 100%;
         margin: 0 auto;
       
@@ -312,7 +327,8 @@ body {
             }
         }
         .invest-cards-container {
-            width: 1170px; //1170
+            max-width: 1170px; //1170
+            margin: 5px 0 0 5px;
             height: 1000px;
            
             display: grid;
@@ -592,14 +608,18 @@ body {
 
     }
         .invest-cards-container__decor-spinner {
-            width: 306px;
-            height: 301px;
+            //width: 306px; //306px от 1920
+            //height: 301px; //301px от 1680
+            width: 15.9375%; //306px
+            //height: 17.916%; //301px
+            padding-top: 15.9375%;
             background: url(../images/spinnerDecor.svg);
             background-size: cover;
             position: absolute;
             left: 40px;
             top: 35.5%;
             animation: spinner 20s linear  infinite;
+            border: 1px solid black;
 
             @keyframes spinner {
                 from {

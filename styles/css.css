@@ -24,8 +24,9 @@ body {
 }
 
 .container {
+  min-width: 768px;
   max-width: 1920px;
-  height: 4513px;
+  min-height: 4513px;
   position: relative;
   margin: 0 auto;
   color: white;
@@ -33,7 +34,7 @@ body {
 
 /*Контейнер для первого блока - навигации и вводной инормации*/
 .header-container {
-  height: 870px;
+  min-height: 870px;
   position: relative;
   background-color: black;
   background-image: url(../images/sky-scrapper-cut.jpg);
@@ -48,7 +49,7 @@ body {
   height: inherit;
 }
 .header-container .header .nav-container {
-  height: 90px;
+  min-height: 90px;
   display: flex;
   margin: 0 10px;
   justify-content: space-between;
@@ -86,10 +87,10 @@ body {
   line-height: 24px;
   color: #FFFFFF;
 }
-.header-container .header .nav-container .nav-block .dropdown--large-width {
+.header-container .header .nav-container .nav-block .dropdown-large {
   width: 216px;
 }
-.header-container .header .nav-container .nav-block .dropdown--medium-width {
+.header-container .header .nav-container .nav-block .dropdown-medium {
   width: 117px;
 }
 .header-container .header .nav-container .nav-block .dropdown__hidden-list {
@@ -101,18 +102,21 @@ body {
   top: 36px;
   cursor: pointer;
   overflow: visible;
+  /*.dropdown__hidden-list:hover::after {
+      content: url(../images/carete-down.svg);
+      transform: rotate(90deg);
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+  }*/
 }
 .header-container .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list {
   display: block;
   position: relative;
 }
-.header-container .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list:hover::after {
-  content: url(../images/carete-down.svg);
-  transform: rotate(90deg);
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 0;
+.header-container .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list:hover {
+  color: rgb(90, 77, 77);
 }
 .header-container .header .nav-container .nav-block .login {
   background-color: #7B61FF;
@@ -124,6 +128,13 @@ body {
   width: 135px;
   height: 54px;
   margin: 0;
+}
+@media screen and (max-width: 815px) {
+  .header-container .header .nav-container .nav-block .login--desctop-size {
+    width: 90px;
+    height: 44px;
+    margin: 0;
+  }
 }
 .header-container .header .nav-container .nav-block .login:hover {
   background-color: #836eec;
@@ -138,6 +149,12 @@ body {
   width: 160px;
   height: 54px;
 }
+@media screen and (max-width: 815px) {
+  .header-container .header .nav-container .nav-block .register--desctop-size {
+    width: 110px;
+    height: 44px;
+  }
+}
 .header-container .header .nav-container .nav-block .register:hover {
   background-color: #f2e7f3;
   cursor: pointer;
@@ -148,6 +165,11 @@ body {
   font-weight: 700;
   font-size: 16px;
 }
+@media screen and (max-width: 815px) {
+  .header-container .header .nav-container .nav-block .logAndRegFont {
+    font-size: 14px;
+  }
+}
 .header-container .header .nav-container .nav-block .linksFont {
   font-family: "Josefin Sans";
   font-style: normal;
@@ -156,13 +178,22 @@ body {
   line-height: 24px;
   color: #FFFFFF;
 }
+@media screen and (max-width: 1050px) {
+  .header-container .header .nav-container {
+    flex-direction: column;
+  }
+  .header-container .header .nav-container__companyName--sizeDesctop {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
 .header-container .header .initial-info-container {
   position: relative;
   z-index: 5;
   margin-top: 231px;
+  max-width: 791px;
 }
 .header-container .header .initial-info-container .initial-info {
-  width: 770px;
   height: 374px;
   margin: 0 10px;
 }
@@ -178,6 +209,12 @@ body {
   position: relative;
   z-index: 5;
 }
+@media screen and (max-width: 1050px) {
+  .header-container .header .initial-info-container .initial-info .initial-info__title {
+    font-size: 50px;
+    line-height: 70px;
+  }
+}
 .header-container .header .initial-info-container .initial-info .initial-info__description {
   width: 470px;
   font-family: "Josefin Sans";
@@ -187,6 +224,12 @@ body {
   line-height: 32px;
   position: relative;
   z-index: 5;
+}
+@media screen and (max-width: 1050px) {
+  .header-container .header .initial-info-container .initial-info .initial-info__description {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 .header-container .header .initial-info-container .initial-info .initial-info__button {
   display: flex;
@@ -205,6 +248,14 @@ body {
   z-index: 5;
   cursor: pointer;
 }
+@media screen and (max-width: 1050px) {
+  .header-container .header .initial-info-container .initial-info .initial-info__button {
+    padding: 20px 35px 18px;
+    gap: 3px;
+    max-width: 270px;
+    height: 55px;
+  }
+}
 .header-container .header .initial-info-container .initial-info .initial-info__button:hover {
   background-color: #836eec;
 }
@@ -217,6 +268,18 @@ body {
   z-index: 1;
   left: -12.75%;
   top: -37.75%;
+}
+@media screen and (max-width: 1050px) {
+  .header-container .header .initial-info-container .initial-info .initial-info__decor-shape {
+    width: 458px;
+    height: 458px;
+    left: -11%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header-container .header .initial-info-container {
+    margin: 231px auto 0 auto;
+  }
 }
 .header-container .header-container__decor-sharp-lines {
   position: absolute;
@@ -234,23 +297,29 @@ body {
   }
 }
 
+@media screen and (max-width: 1020px) {
+  .header-container {
+    background-position: left 35% top 0;
+  }
+}
 .offering-for-investor-container {
-  height: 1680px;
+  min-height: 1680px;
   background-color: #FFFFFF;
   position: relative;
   border-top: 1px solid transparent;
 }
-.offering-for-investor-container .offering-for-investor {
+.offering-for-investor-container .offering-for-investor-content {
   max-width: 1170px;
   height: 100%;
   margin: 0 auto;
+  border-bottom: 1px solid transparent;
 }
-.offering-for-investor-container .offering-for-investor .offering-for-investor__title-description-wrapper {
-  width: 770px;
+.offering-for-investor-container .offering-for-investor-content .offering-for-investor-content__title-description-wrapper {
+  max-width: 770px;
   height: 152px;
   margin: 160px auto 60px auto;
 }
-.offering-for-investor-container .offering-for-investor .offering-for-investor__title-description-wrapper .offering-for-investor__title {
+.offering-for-investor-container .offering-for-investor-content .offering-for-investor-content__title-description-wrapper .offering-for-investor-content__title {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -262,7 +331,12 @@ body {
   margin: 0;
   margin-bottom: 24px;
 }
-.offering-for-investor-container .offering-for-investor .offering-for-investor__title-description-wrapper .offering-for-investor__description {
+@media screen and (max-width: 960px) {
+  .offering-for-investor-container .offering-for-investor-content .offering-for-investor-content__title-description-wrapper .offering-for-investor-content__title {
+    font-size: 42px;
+  }
+}
+.offering-for-investor-container .offering-for-investor-content .offering-for-investor-content__title-description-wrapper .offering-for-investor-content__description {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
@@ -271,48 +345,53 @@ body {
   text-align: center;
   color: #999999;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container {
-  max-width: 1170px;
-  margin: 5px 0 0 5px;
-  height: 1000px;
-  display: grid;
-  grid-template-rows: 480px 480px;
-  grid-template-columns: 370px 370px 370px;
-  grid-gap: 40px 30px;
+@media screen and (max-width: 960px) {
+  .offering-for-investor-container .offering-for-investor-content .offering-for-investor-content__title-description-wrapper .offering-for-investor-content__description {
+    font-size: 18px;
+  }
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content {
-  width: 370px;
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container {
+  max-width: 1170px;
+  min-height: 1000px;
+  display: grid;
+  grid-template-rows: 48% 48%;
+  grid-template-columns: 31.62% 31.62% 31.62%;
+  grid-gap: 40px 2.564%;
+  margin: 0 1% 0 1%;
+}
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content {
+  width: 100%;
   height: 480px;
   overflow: hidden;
   /*Бэкраунд для imageContainer - сам контейнер ниже -  imageContainer*/
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .card {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .card {
   position: relative;
   top: 0;
-  width: 370px;
+  width: 100%;
   height: 720px;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .card:hover {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .card:hover {
   position: relative;
   transition: all 1s ease-in-out;
   top: -244px;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .image-container {
-  width: 370px;
-  height: 240px;
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .image-container {
+  width: 100%;
+  height: 33.33%;
   border-top: 1px solid transparent;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .image-container .tags-container {
-  width: 322px;
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .image-container .tags-container {
+  width: 87.02%;
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 2.48%;
   min-height: 50px;
-  margin: 24px auto 0 24px;
+  margin: 7.45% auto 0 7.45%;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .image-container .tags-container .tags-container__tag {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .image-container .tags-container .tags-container__tag {
   padding: 8px 12px 6px 12px;
   background: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
@@ -324,14 +403,14 @@ body {
   color: #333333;
   margin: 0;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container {
-  width: 322px;
-  height: 240px;
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container {
+  width: 87.02%;
+  height: 33.33%;
   margin: 0 auto;
   border-top: 1px solid transparent;
   border-bottom: 1px solid #ECECEC;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .description-and-range-container__title {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .description-and-range-container__title {
   height: 32px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -343,7 +422,7 @@ body {
   color: #333333;
   margin: 24px 0 0 0;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .description-and-range-container__city {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .description-and-range-container__city {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -355,7 +434,7 @@ body {
   color: #999999;
   margin: 0;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .description-and-range-container__description {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .description-and-range-container__description {
   width: 322px;
   height: 48px;
   margin: 24px 0 0 0;
@@ -368,28 +447,34 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container {
-  width: 322px;
+@media screen and (max-width: 1170px) {
+  .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .description-and-range-container__description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .earn-container {
+  width: 100%;
   height: 40px;
   margin-top: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .earn-container__range {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .earn-container .earn-container__range {
   height: 8px;
   width: 100%;
   background-color: #ECECEC;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .earn-container__range .earn-container__scale {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .earn-container .earn-container__range .earn-container__scale {
   height: 100%;
   width: 58%;
   background-color: #7B61FF;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .money-container {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .earn-container .money-container {
   height: 24px;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .money-container .money-container__raised {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .earn-container .money-container .money-container__raised {
   color: #7B61FF;
   height: 24px;
   font-family: "Josefin Sans";
@@ -398,7 +483,7 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .description-and-range-container .earn-container .money-container .money-container__raised-of {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .earn-container .money-container .money-container__raised-of {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -409,24 +494,24 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container {
   height: 240px;
-  width: 370px;
+  width: 100%;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content--margin-top {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container .conditions-content--margin-top {
   margin-top: 24px !important;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content {
-  width: 322px;
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container .conditions-content {
+  width: 87.02%;
   margin: 0 auto;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content .condition-wrapper {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container .conditions-content .condition-wrapper {
   height: 24px;
   margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content .condition-wrapper .condition-wrapper__condition {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container .conditions-content .condition-wrapper .condition-wrapper__condition {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -437,7 +522,7 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .conditions-content .condition-wrapper .condition-wrapper__value {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container .conditions-content .condition-wrapper .condition-wrapper__value {
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -448,7 +533,7 @@ body {
   /* Grey/1 */
   color: #333333;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .investment-conditions-container__button {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container .investment-conditions-container__button {
   padding: 24px 40px 22px;
   margin-top: 24px;
   width: 100%;
@@ -462,41 +547,52 @@ body {
   line-height: 24px;
   color: white;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .investment-conditions-container .investment-conditions-container__button:hover {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container .investment-conditions-container__button:hover {
   background: #235ac7;
   cursor: pointer;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--scy-scrapper {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--scy-scrapper {
   background-image: url(../images/investCardImg/buildingBlack.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--key-chain {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--key-chain {
   background-image: url(../images/investCardImg/keyChainHouse.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--building-nature {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--building-nature {
   background-image: url(../images/investCardImg/buildingNature.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--laptop {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--laptop {
   background-image: url(../images/investCardImg/laptopjpg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--office {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--office {
   background-image: url(../images/investCardImg/office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container .cards-content .bg-image-path--wheat {
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--wheat {
   background-image: url(../images/investCardImg/wheatField.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container__button {
+@media screen and (max-width: 1170px) {
+  .offering-for-investor-container .offering-for-investor-content .invest-cards-container {
+    max-width: 1170px;
+    min-height: 1000px;
+    display: grid;
+    grid-template-rows: 31.62% 31.62% 31.62%;
+    grid-template-columns: 48% 48%;
+    grid-gap: 40px 2.564%;
+    margin: 0 1% 0 1%;
+  }
+}
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -517,7 +613,12 @@ body {
   border: 1px solid #336EE1;
   transition: all 0.2s;
 }
-.offering-for-investor-container .offering-for-investor .invest-cards-container__button:hover {
+@media screen and (max-width: 1170px) {
+  .offering-for-investor-container .offering-for-investor-content .invest-cards-container__button {
+    margin-bottom: 50px;
+  }
+}
+.offering-for-investor-container .offering-for-investor-content .invest-cards-container__button:hover {
   background-color: #336EE1;
   color: white;
   cursor: pointer;
@@ -531,7 +632,6 @@ body {
   left: 40px;
   top: 35.5%;
   animation: spinner 20s linear infinite;
-  border: 1px solid black;
 }
 @keyframes spinner {
   from {
@@ -541,15 +641,41 @@ body {
     transform: rotate(360deg);
   }
 }
+@media screen and (max-width: 1920px) {
+  .offering-for-investor-container .invest-cards-container__decor-spinner {
+    width: 12%;
+    padding-top: 12%;
+  }
+}
+@media screen and (max-width: 1720px) {
+  .offering-for-investor-container .invest-cards-container__decor-spinner {
+    width: 8%;
+    padding-top: 8%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .offering-for-investor-container .invest-cards-container__decor-spinner {
+    width: 8%;
+    padding-top: 8%;
+    top: 10%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .offering-for-investor-container .invest-cards-container__decor-spinner {
+    display: none;
+  }
+}
 
 .paymants-to-investor-container {
-  height: 696px;
+  min-height: 696px;
   background: #ECF4FD;
   position: relative;
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 .paymants-to-investor-container .paymants-to-investor-content {
-  width: 1170px;
+  max-width: 1170px;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -590,9 +716,21 @@ body {
   margin: 0;
 }
 .paymants-to-investor-container .paymants-to-investor-content .chart-container {
-  width: 570px;
-  height: 356px;
+  max-width: 570px;
+  min-height: 356px;
   display: block;
+}
+.paymants-to-investor-container .paymants-to-investor-content .chart-container .chart-container__svg-chart {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .paymants-to-investor-container .paymants-to-investor-content {
+    flex-direction: column;
+  }
+  .paymants-to-investor-container .chart-container {
+    margin-left: -8.07%;
+  }
 }
 .paymants-to-investor-container .paymants-to-investor-container--decor-rounded-figure {
   height: 424px;
@@ -600,9 +738,16 @@ body {
   background-image: url(../images/roundedFigure.svg);
   background-size: cover;
   position: absolute;
-  top: 38.94%;
+  bottom: 0;
   left: 0;
-  z-index: 5;
+  z-index: 0;
+}
+@media screen and (max-width: 1024px) {
+  .paymants-to-investor-container .paymants-to-investor-container--decor-rounded-figure {
+    transform: scaleY(-1);
+    top: 0;
+    left: 0;
+  }
 }
 .paymants-to-investor-container .paymants-to-investor-container--decor-circle {
   position: absolute;
@@ -617,16 +762,17 @@ body {
   position: relative;
 }
 .offer-for-grow-capital-container .offer-for-grow-capital-content {
-  width: 1170px;
+  max-width: 1170px;
   height: 100%;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button {
-  width: 570px;
-  height: 422px;
+  max-width: 570px;
+  max-height: 422px;
 }
 .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__title {
   height: 192px;
@@ -640,6 +786,13 @@ body {
   color: #333333;
   margin-bottom: 24px;
 }
+@media screen and (max-width: 1024px) {
+  .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__title {
+    font-size: 40px;
+    line-height: 54px;
+    height: 150px;
+  }
+}
 .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__description {
   height: 96px;
   font-family: "Josefin Sans";
@@ -651,6 +804,13 @@ body {
   /* Grey/2 */
   color: #999999;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__description {
+    font-size: 20px;
+    line-height: 26px;
+    height: 75px;
+  }
 }
 .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__button {
   display: flex;
@@ -676,30 +836,54 @@ body {
   background-color: #836eec;
   cursor: pointer;
 }
+.offer-for-grow-capital-container .offer-for-grow-capital-content .offer-for-grow-capital-container__money-grow-img-content {
+  width: 40.34%;
+  height: 59.15%;
+}
+.offer-for-grow-capital-container .offer-for-grow-capital-content .offer-for-grow-capital-container__money-grow-img-content .offer-for-grow-capital-container__svg {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1170px) {
+  .offer-for-grow-capital-container .offer-for-grow-capital-content {
+    margin: 0 1% 0 1%;
+  }
+}
 .offer-for-grow-capital-container .offer-for-grow-capital-container__decorSpinner {
-  width: 306px;
-  height: 301px;
+  width: 15.9375%;
+  padding-top: 15.9375%;
   background: url(../images/spinnerDecor.svg);
   background-size: cover;
   position: absolute;
   right: 0px;
-  top: 160px;
+  top: 20.48%;
+}
+@media screen and (max-width: 1765px) {
+  .offer-for-grow-capital-container .offer-for-grow-capital-container__decorSpinner {
+    display: none;
+  }
 }
 
+/*Footer*/
 .footer-container {
+  max-width: 1920px;
   height: 484px;
   background-color: #ECECEC;
+  /*Social media icons*/
 }
 .footer-container .footer-content {
-  width: 1170px;
+  max-width: 1170px;
   height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   margin: 0 auto;
+  /*Name and copyright*/
   /*Services*/
   /*About*/
+  /*Up href*/
+  /*Subscribe*/
 }
 .footer-container .footer-content .name-copyright-content {
   width: 370px;
@@ -734,6 +918,12 @@ body {
   /* Grey/1 */
   color: #333333;
 }
+@media screen and (max-width: 1170px) {
+  .footer-container .footer-content .name-copyright-content {
+    max-width: 370px;
+    margin: 0;
+  }
+}
 .footer-container .footer-content .services-content {
   width: 270px;
   height: 184px;
@@ -767,15 +957,21 @@ body {
   /* Grey/1 */
   color: #333333;
 }
+@media screen and (max-width: 1170px) {
+  .footer-container .footer-content .services-content {
+    width: auto;
+    margin: 0;
+  }
+}
 .footer-container .footer-content .about-content {
   width: 270px;
   height: 184px;
+  display: flex;
+  justify-content: center;
   margin-right: 50px;
 }
 .footer-container .footer-content .about-content .about {
   display: flex;
-  height: 100%;
-  width: 100%;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -799,6 +995,23 @@ body {
   /* identical to box height, or 150% */
   /* Grey/1 */
   color: #333333;
+}
+@media screen and (max-width: 1170px) {
+  .footer-container .footer-content .about-content {
+    max-width: 370px;
+    margin: 0;
+    display: flex;
+    align-content: center;
+  }
+}
+@media screen and (max-width: 820px) {
+  .footer-container .footer-content .about-content {
+    width: auto;
+  }
+}
+.footer-container .footer-content .up {
+  width: 50px;
+  height: 50px;
 }
 .footer-container .footer-content .subscribe-content {
   width: 370px;
@@ -852,12 +1065,23 @@ body {
   padding: 0;
   margin: 0;
 }
+@media screen and (max-width: 1170px) {
+  .footer-container .footer-content {
+    justify-content: space-between;
+    margin: 0 1% 0 1%;
+  }
+}
 .footer-container .social-media-icons-content {
   width: 123.49px;
   height: 16px;
   display: flex;
   justify-content: space-between;
   margin: 164px 0 0 676px;
+}
+@media screen and (max-width: 1170px) {
+  .footer-container .social-media-icons-content {
+    margin-left: 0;
+  }
 }
 
 /*

@@ -7,9 +7,12 @@
     <title>Investment</title>
     <link href="./styles/normalize.css" rel="stylesheet" type="text/css">
     <link href="./styles/css.css" rel="stylesheet" type="text/css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+   
     <div class="container">
+        
         <!--Header and initial info container-->
         <section class="header-container">
             <header class="header">
@@ -19,26 +22,35 @@
                         next invest
                     </p>    
                     <nav class="nav-block">
-                        <ul class="dropdown dropdown-large">
-                            <li>Investment Opportunities
-                                <svg id="svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11 1L6 6L1 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </li>
-                            <li class="dropdown__hidden-list">Place holder</li> 
-                            <li class="dropdown__hidden-list">Place holder</li>
-                            <li class="dropdown__hidden-list">Place holder</li>
-                        </ul>   
-                        <ul class="dropdown dropdown-medium">
-                            <li>How it works <svg id="svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11 1L6 6L1 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <button class="burger">
+                            <span class="line line-one"></span>
+                            <span class="line line-two"></span>
+                            <span class="line line-three"></span>
+                        </button>
+                        <ul class="dropdown ">
+                            <ul class="dropdown__oppurtunities dropdown--hover">
+                                <li>Investment Opportunities
+                                    <svg id="svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 1L6 6L1 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </li>
+                                <li class="dropdown__hidden-list">Place holder</li> 
+                                <li class="dropdown__hidden-list">Place holder</li>
+                                <li class="dropdown__hidden-list">Place holder</li>   
+                            </ul>
+                    
+                            <ul class="dropdown__how-works dropdown--hover">
+                                <li>How it works <svg id="svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg></li>  
-                            <li class="dropdown__hidden-list">Place holder</li> 
-                            <li class="dropdown__hidden-list">Place holder</li>
-                            <li class="dropdown__hidden-list">Place holder</li>
+                                <li class="dropdown__hidden-list">Place holder</li> 
+                                <li class="dropdown__hidden-list">Place holder</li>
+                                <li class="dropdown__hidden-list">Place holder</li>
+                            </ul>
+                            <li class="linksFont">About us</li>
                         </ul>
                         <!--Надо не забыть добавить ссылки в списках - хотя бы якоря-->
-                        <p class="linksFont">About us</p>
+                       
                         <button class="login login--desctop-size logAndRegFont ">login</button>
                         <button class="register register--desctop-size logAndRegFont">register</button>
                     </nav>
@@ -1372,3 +1384,4 @@
     </div> 
 </body>
 </html>
+

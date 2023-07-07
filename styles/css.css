@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  min-width: 768px;
+  min-width: 280px;
   max-width: 1920px;
   min-height: 4513px;
   position: relative;
@@ -74,12 +74,61 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
   padding: 0px;
   gap: 24px;
   height: 54px;
   font-family: "Josefin Sans";
+  /*Класс для dropdown*/
+}
+.header-container .header .nav-container .nav-block .burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
+.header-container .header .nav-container .nav-block .burger .line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+}
+.header-container .header .nav-container .nav-block .burger .line-one {
+  position: absolute;
+  top: 0;
+}
+.header-container .header .nav-container .nav-block .burger .line-two {
+  position: absolute;
+  top: 14px;
+}
+.header-container .header .nav-container .nav-block .burger .line-three {
+  position: absolute;
+  bottom: 0;
+}
+.header-container .header .nav-container .nav-block .burger .line-one--rotate {
+  transform: translateY(15px) rotate(45deg);
+  transition: 0.2s;
+}
+.header-container .header .nav-container .nav-block .burger .line-two--hide {
+  display: none;
+}
+.header-container .header .nav-container .nav-block .burger .line-three--rotate {
+  transform: translateY(-13px) rotate(-45deg);
+  transition: 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .header-container .header .nav-container .nav-block .burger {
+    display: block;
+    position: absolute;
+    left: 0;
+  }
 }
 .header-container .header .nav-container .nav-block .dropdown {
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+  align-items: center;
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -87,36 +136,43 @@ body {
   line-height: 24px;
   color: #FFFFFF;
 }
-.header-container .header .nav-container .nav-block .dropdown-large {
-  width: 216px;
+@media screen and (max-width: 768px) {
+  .header-container .header .nav-container .nav-block .dropdown {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 10;
+  }
 }
-.header-container .header .nav-container .nav-block .dropdown-medium {
-  width: 117px;
+.header-container .header .nav-container .nav-block .visible {
+  display: block;
 }
 .header-container .header .nav-container .nav-block .dropdown__hidden-list {
   display: none;
 }
-.header-container .header .nav-container .nav-block .dropdown:hover {
+.header-container .header .nav-container .nav-block .dropdown--hover:hover {
   position: relative;
   z-index: 10;
   top: 36px;
   cursor: pointer;
   overflow: visible;
-  /*.dropdown__hidden-list:hover::after {
-      content: url(../images/carete-down.svg);
-      transform: rotate(90deg);
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      top: 0;
-  }*/
 }
-.header-container .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list {
+.header-container .header .nav-container .nav-block .dropdown--hover:hover .dropdown__hidden-list {
   display: block;
   position: relative;
 }
-.header-container .header .nav-container .nav-block .dropdown:hover .dropdown__hidden-list:hover {
+.header-container .header .nav-container .nav-block .dropdown--hover:hover .dropdown__hidden-list:hover {
   color: rgb(90, 77, 77);
+}
+@media screen and (max-width: 768px) {
+  .header-container .header .nav-container .nav-block .dropdown--hover:hover {
+    top: 0;
+  }
 }
 .header-container .header .nav-container .nav-block .login {
   background-color: #7B61FF;
@@ -177,6 +233,13 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .header-container .header .nav-container .nav-block {
+    position: relative;
+    width: 98%;
+    justify-content: flex-end;
+  }
 }
 @media screen and (max-width: 1050px) {
   .header-container .header .nav-container {

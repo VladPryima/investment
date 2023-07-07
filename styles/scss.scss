@@ -40,7 +40,7 @@ body {
 }
 
 .container {
-    min-width: 768px;
+    min-width: 280px;
     max-width: 1920px; //1920px
     min-height: 4513px; //4513px;
     position: relative;
@@ -97,35 +97,116 @@ body {
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
+
+                position: relative;
+
                 padding: 0px;
                 gap: 24px;
                 height: 54px;
                 font-family: 'Josefin Sans';
 
+                
+                .burger {
+                    display: none;
+                    position: relative;
+
+                    width: 30px;
+                    height: 30px;
+                    background-color: transparent;
+                    
+                    .line {
+                        display: block;
+                        width: 30px;
+                        height: 2px;
+                        background-color: rgb(255, 255, 255);
+                    }
+                    .line-one {
+                        position: absolute;
+                        top: 0;
+                    }
+                    .line-two {
+                        position: absolute;
+                        top: 14px;
+                    }
+                    .line-three {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                    
+                    .line-one--rotate {
+                        transform: translateY(15px) rotate(45deg);
+                        transition: .2s;
+                        
+                    }
+                    .line-two--hide {
+                        display: none;
+                    }
+                    .line-three--rotate {
+                        transform: translateY(-13px) rotate(-45deg);
+                        transition: .2s;
+                    }
+                    
+                }
+                @media screen and (max-width: 768px) {
+                    .burger {
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                    }
+                    
+                }
+
                 //Oppurtunities dropdown
                 .dropdown {
+                    display: flex;
+                    gap: 24px;
+                    flex-direction: row;
+                    align-items: center;
+
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 24px;
                     color: #FFFFFF;
+                    
+                }
+                @media screen and (max-width: 768px) {
+                    .dropdown {
+                        
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 0;
+
+                        display: none;
+                        position: absolute;
+                        left: 0;
+                        top: 50px;
+                        z-index: 10;
+                    }
+                    .dropdown__oppurtunities--hover {
+                       
+                    }
+                    
+                }
+                /*Класс для dropdown*/
+                .visible {
+                    display: block;
                 }
                 //Размеры кстати необязательные
-                .dropdown-large {
-                    width: 216px; 
-                    
-                     
+                .dropdown__oppurtunities {
+                    //width: 216px; 
+  
                 }
-                .dropdown-medium {
-                    width: 117px;
-                    
-                    
+                .dropdown__how-works {
+                    //width: 117px;
+                      
                 }
                 .dropdown__hidden-list {
                     display: none;   
                 }
-                .dropdown:hover {
+                .dropdown--hover:hover {
                     position: relative;
                     z-index: 10;
                     top: 36px; //Чтобы при ховере увеличенный блок не центрировался флексом
@@ -136,19 +217,17 @@ body {
                         display: block;
                         position: relative;
                     }
-                    /*.dropdown__hidden-list:hover::after {
-                        content: url(../images/carete-down.svg);
-                        transform: rotate(90deg);
-                        display: inline-block;
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                    }*/
                     .dropdown__hidden-list:hover {
                         color: rgb(90, 77, 77);
-                    }
-                    
+                    }    
                 }
+                @media screen and (max-width: 768px) {
+                    .dropdown--hover:hover {
+                       top: 0;
+                    
+                    }
+                }
+              
                 
                 .login {
                     background-color: $purple;
@@ -217,6 +296,15 @@ body {
                     color: #FFFFFF;
                 }
             }
+            @media screen and (max-width: 768px) {
+                .nav-block {
+                    position: relative;
+                    width: 98%;
+                    justify-content: flex-end;
+                }
+                
+            }
+            
         }
         @media screen and (max-width: 1050px) {
             .nav-container {

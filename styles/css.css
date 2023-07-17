@@ -81,9 +81,9 @@ body {
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  height: 54px;
   padding: 0px;
   gap: 24px;
-  height: 54px;
   font-family: "Josefin Sans";
   /*Класс для dropdown*/
 }
@@ -98,18 +98,16 @@ body {
   display: block;
   width: 100%;
   height: 2px;
+  position: absolute;
   background-color: rgb(255, 255, 255);
 }
 .header-container .header .nav-container .nav-block .burger .line-one {
-  position: absolute;
   top: 0;
 }
 .header-container .header .nav-container .nav-block .burger .line-two {
-  position: absolute;
   top: 50%;
 }
 .header-container .header .nav-container .nav-block .burger .line-three {
-  position: absolute;
   bottom: 0;
 }
 .header-container .header .nav-container .nav-block .burger .line-one--rotate {
@@ -646,6 +644,8 @@ body {
   width: 100%;
   height: 33.33%;
   border-top: 1px solid transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .image-container .tags-container {
   width: 87.02%;
@@ -659,6 +659,7 @@ body {
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .image-container .tags-container .tags-container__tag {
   padding: 8px 12px 6px 12px;
+  margin: 0;
   background: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   font-family: "Josefin Sans";
@@ -667,7 +668,6 @@ body {
   font-size: 10px;
   line-height: 12px;
   color: #333333;
-  margin: 0;
 }
 @media (max-width: 768px) {
   .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .image-container .tags-container .tags-container__tag {
@@ -776,13 +776,13 @@ body {
   height: 24px;
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .earn-container .money-container .money-container__raised {
-  color: #7B61FF;
   height: 24px;
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
+  color: #7B61FF;
 }
 @media (max-width: 500px) {
   .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .description-and-range-container .earn-container .money-container .money-container__raised {
@@ -881,8 +881,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
-  /* Grey/1 */
   color: #333333;
 }
 @media (max-width: 768px) {
@@ -909,10 +907,10 @@ body {
   }
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .investment-conditions-container .investment-conditions-container__button {
-  padding: 24px 40px 22px;
-  margin-top: 24px;
   width: 100%;
   height: 72px;
+  padding: 24px 40px 22px;
+  margin-top: 24px;
   background: #336EE1;
   text-transform: uppercase;
   font-family: "Josefin Sans";
@@ -938,35 +936,23 @@ body {
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--scy-scrapper {
   background-image: url(../images/investCardImg/buildingBlack.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--key-chain {
   background-image: url(../images/investCardImg/keyChainHouse.jpg);
-  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--building-nature {
   background-image: url(../images/investCardImg/buildingNature.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--laptop {
   background-image: url(../images/investCardImg/laptopjpg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--office {
   background-image: url(../images/investCardImg/office.jpg);
-  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container .card-content .bg-image-path--wheat {
   background-image: url(../images/investCardImg/wheatField.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 @media screen and (max-width: 1170px) {
   .offering-for-investor-container .offering-for-investor-content .invest-cards-container {
@@ -1003,6 +989,21 @@ body {
 @media screen and (max-width: 1170px) {
   .offering-for-investor-container .offering-for-investor-content .invest-cards-container__button {
     margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .offering-for-investor-container .offering-for-investor-content .invest-cards-container__button {
+    width: 200px;
+    height: 60px;
+    padding: 0;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .offering-for-investor-container .offering-for-investor-content .invest-cards-container__button {
+    width: 160px;
+    height: 50px;
+    font-size: 12px;
   }
 }
 .offering-for-investor-container .offering-for-investor-content .invest-cards-container__button:hover {
@@ -1080,6 +1081,7 @@ body {
 }
 .paymants-to-investor-container .paymants-to-investor-content .summ-of-paids .summ-of-paids__title {
   height: 128px;
+  margin: 40px 0 24px 0;
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
@@ -1088,7 +1090,6 @@ body {
   /* or 133% */
   /* Grey/1 */
   color: #333333;
-  margin: 40px 0 24px 0;
 }
 @media (max-width: 768px) {
   .paymants-to-investor-container .paymants-to-investor-content .summ-of-paids .summ-of-paids__title {
@@ -1119,6 +1120,7 @@ body {
 }
 .paymants-to-investor-container .paymants-to-investor-content .summ-of-paids .summ-of-paids__description {
   height: 128px;
+  margin: 0;
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
@@ -1127,7 +1129,6 @@ body {
   /* or 133% */
   /* Grey/2 */
   color: #999999;
-  margin: 0;
 }
 @media (max-width: 768px) {
   .paymants-to-investor-container .paymants-to-investor-content .summ-of-paids .summ-of-paids__description {
@@ -1252,6 +1253,7 @@ body {
 }
 .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__description {
   height: 96px;
+  margin-bottom: 40px;
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
@@ -1260,31 +1262,30 @@ body {
   /* or 133% */
   /* Grey/2 */
   color: #999999;
-  margin-bottom: 40px;
 }
 @media screen and (max-width: 1024px) {
   .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__description {
+    height: 75px;
     font-size: 20px;
     line-height: 26px;
-    height: 75px;
   }
 }
 @media screen and (max-width: 560px) {
   .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__description {
+    height: 75px;
     font-size: 16px;
     line-height: 24px;
-    height: 75px;
   }
 }
 .offer-for-grow-capital-container .offer-for-grow-capital-content .title-description-button .title-description-button__button {
+  width: 270px;
+  height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 24px 40px 22px;
   gap: 4px;
-  width: 270px;
-  height: 70px;
   background: #7B61FF;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -1492,9 +1493,9 @@ body {
   margin-right: 30px;
 }
 .footer-container .footer-content .services-content .services {
-  display: flex;
   height: 100%;
   width: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -1669,6 +1670,7 @@ body {
 }
 .footer-container .footer-content .subscribe-content .subscribe-content__title {
   height: 36px;
+  margin: 0;
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
@@ -1677,7 +1679,6 @@ body {
   /* identical to box height, or 150% */
   /* Grey/1 */
   color: #333333;
-  margin: 0;
 }
 @media (max-width: 560px) {
   .footer-container .footer-content .subscribe-content .subscribe-content__title {
@@ -1708,8 +1709,8 @@ body {
   align-items: center;
 }
 .footer-container .footer-content .subscribe-content .email-form-content .email-form .email-form__email {
-  background-color: #ECECEC;
   height: 24px;
+  background-color: #ECECEC;
   border: none;
   font-family: "Josefin Sans";
   font-style: normal;
@@ -1788,46 +1789,6 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .footer-container {
-    /*
-    .name-copyright-content {
-      grid-area: a;
-    }*/
-    /*
-    .up {
-      grid-area: b;
-      position: absolute;
-      right: 0;
-    }
-    */
-    /*
-    .services-content {
-      grid-area: c;
-    }
-    */
-    /*
-    .about-content {
-      grid-area: f;
-      display: block;
-      justify-content: flex-end !important;
-    }
-    */
-    /*
-    .subscribe-content {
-      grid-area: g;
-      margin-top: 35px !important;
-    }
-    */
-    /*
-    .social-media-icons-content {
-      grid-area: h;
-      margin-top: 120px !important;
-
-      justify-self: end;
-
-    }
-    */
-  }
   .footer-container .footer-content {
     position: relative;
     display: grid;

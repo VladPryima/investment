@@ -54,11 +54,6 @@ body {
     position: relative;
     background-color: black; 
     background-image: url(../images/sky-scrapper-cut.jpg);
-    //background-position: top 2535px left -70px;
-    //background-size: 110%;
-    //background-position: top 2380px left 0px;
-    //background-position: top 45% left 0;
-    //background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -67,8 +62,6 @@ body {
         margin: 0 auto;
         height: inherit;
 
-       
-
         .nav-container {
             min-height: 90px;
             display: flex;
@@ -76,7 +69,6 @@ body {
             justify-content: space-between;
             align-items: center;
 
-        
             .nav-container__companyName {
                 text-transform: uppercase;
                 font-family: 'Josefin Sans';
@@ -85,12 +77,9 @@ body {
                 letter-spacing: 0.06em;
                 color: #FFFFFF;
 
-                margin: 10px auto;
-               
-                
+                margin: 10px auto;   
             }
 
-           
             .nav-container__companyName--sizeDesctop {
                 width: 185px; //Было 181
                 height: 24px;
@@ -101,11 +90,9 @@ body {
             @media screen and (max-width: 768px) { 
                 .nav-container__companyName {
                     font-size: 20px;
-                }
-                
+                }  
             }
 
-            
             .nav-block {
                 display: flex;
                 flex-direction: row;
@@ -113,13 +100,13 @@ body {
                 justify-content: flex-start;
 
                 position: relative;
-
+                height: 54px;
                 padding: 0px;
                 gap: 24px;
-                height: 54px;
+                
+
                 font-family: 'Josefin Sans';
 
-                
                 .burger {
                     display: none;
                     position: relative;
@@ -132,40 +119,38 @@ body {
                         display: block;
                         width: 100%;
                         height: 2px;
+
+                        position: absolute;
+
                         background-color: rgb(255, 255, 255);
                     }
+
                     .line-one {
-                        position: absolute;
                         top: 0;
                     }
+
                     .line-two {
-                        position: absolute;
-                        top: 50%;
-                        
+                        top: 50%;    
                     }
                     .line-three {
-                        position: absolute;
                         bottom: 0;
                     }
                     
                     .line-one--rotate {
-                        //transform: translateY(15px) rotate(45deg);
                         transform:  rotate(45deg);
                         top: 50%;
                         transition: .2s;
-                        
                     }
+
                     .line-two--hide {
                         transform:  rotate(-45deg);
                     }
+
                     .line-three--rotate {
-                        //transform: translateY(-13px) rotate(-45deg);
                         transform:  rotate(-45deg);
                         top: 50%;
                         transition: .2s;
-                        
-                    }
-                    
+                    }  
                 }
                 @media screen and (max-width: 768px) {
                     .burger {
@@ -173,7 +158,6 @@ body {
                         position: absolute;
                         left: 0;
                     }
-                    
                 }
                 @media screen and (max-width: 480px) {
                     .burger {
@@ -183,9 +167,7 @@ body {
                             left: 0;
                             top: 50%;
                         }
-                    }
-                    
-                    
+                    }   
                 }
 
                 //Oppurtunities dropdown
@@ -200,12 +182,10 @@ body {
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 24px;
-                    color: #FFFFFF;
-                    
+                    color: #FFFFFF; 
                 }
                 @media screen and (max-width: 768px) {
                     .dropdown {
-                        
                         flex-direction: column;
                         justify-content: flex-start;
                         align-items: flex-start;
@@ -216,32 +196,21 @@ body {
                         left: 0;
                         top: 50px;
                         z-index: 10;
-                    }
-                    .dropdown__oppurtunities--hover {
-                       
-                    }
-                    
+                    }  
                 }
                 @media screen and (max-width: 480px) {
                     .dropdown {
                         font-size: 14px;
-                    }
-                    
+                    }  
                 }
                 @media screen and (max-width: 340px) {
                     .dropdown {
                         font-size: 12px;
-                    }
-                    
+                    }  
                 }
                 /*Класс для dropdown*/
                 .visible {
                     display: block;
-                }
-                //Размеры кстати необязательные
-                .dropdown__oppurtunities {
-                    
-  
                 }
                 @media screen and (max-width: 768px) {
                     .dropdown__oppurtunities {
@@ -252,21 +221,14 @@ body {
                 .dropdown__oppurtunities:hover {
                     border-bottom: 1px solid rgb(255, 255, 255);
                 }
-                .dropdown__how-works {
-                    //width: 117px;
-                   
-                      
-                }
+
                 @media screen and (max-width: 768px) {
                     .dropdown__how-works {
                         margin-bottom: 2.5%;
                     }
-                    
                 }
                 .dropdown__how-works:hover {
-                    //width: 117px;
-                    border-bottom: 1px solid rgb(255, 255, 255);
-                      
+                    border-bottom: 1px solid rgb(255, 255, 255); 
                 }
                 .dropdown__hidden-list {
                     display: none;   
@@ -289,11 +251,9 @@ body {
                 @media screen and (max-width: 768px) {
                     .dropdown--hover:hover {
                        top: 0;
-                    
                     }
                 }
               
-                
                 .login {
                     background-color: $purple;
                     color: white;
@@ -304,7 +264,6 @@ body {
                     height: 54px; //90 - 40% = 54px (60%)
                     margin: 0;
                 }
-                
                 @media screen and (max-width: 815px) {
                     .login {
                         width: 90px;
@@ -337,7 +296,6 @@ body {
 
                     width: 160px;
                     height: 54px;
-                   
                 }
                 @media screen and (max-width: 815px) {
                     .register {
@@ -402,10 +360,8 @@ body {
                     position: relative;
                     width: 100%;
                     justify-content: flex-end;
-                }
-                
+                }  
             }
-            
         }
         @media screen and (max-width: 1050px) {
             .nav-container {
@@ -414,8 +370,7 @@ body {
             .nav-container__companyName--sizeDesctop {
                 margin-top: 10px;
                 margin-bottom: 20px;
-            }
-                
+            }    
         }
         //Вводная информация
         .initial-info-container {
@@ -425,82 +380,86 @@ body {
             margin-top: 231px;
             max-width: 791px; //770
             
-            
             .initial-info {
-                
                 height: 374px;
                 margin: 0 1%;
                 
-             
                 .initial-info__title {
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 60px;
                     line-height: 80px;
+
                     color: white;
+
                     padding: 0;
                     margin: 0;
+
                     position: relative;
                     z-index: 5;
                 }
                 @media screen and (max-width: 1050px) {
                     .initial-info__title {
-                    font-size: 50px;
-                    line-height: 70px;
+                        font-size: 50px;
+                        line-height: 70px;
                     }  
                 }
                 @media screen and (max-width: 768px) {
                     .initial-info__title {
-                    font-size: 32px;
-                    line-height: 42px;
-                    margin-bottom: 5px;
+                        font-size: 32px;
+                        line-height: 42px;
+                        margin-bottom: 5px;
                     } 
                 }
                 @media screen and (max-width: 560px) {
                     .initial-info__title {
-                    font-size: 24px;
-                    line-height: 34px;
+                        font-size: 24px;
+                        line-height: 34px;
                     } 
                 }
                 @media screen and (max-width: 560px) {
                     .initial-info__title {
                     font-size: 20px;
                     line-height: 28px;
+
                     margin-bottom: 10px;
                     } 
                 }
                 .initial-info__description {
                     max-width: 470px;
+
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 24px;
                     line-height: 32px;
+
                     position: relative;
                     z-index: 5;
                 }
                 @media screen and (max-width: 1050px) {
                     .initial-info__description {
-                    font-size: 20px;
-                    line-height: 28px;
+                        font-size: 20px;
+                        line-height: 28px;
                     }  
                 }
                 @media screen and (max-width: 768px) {
                     .initial-info__description {
-                    font-size: 18px;
-                    line-height: 24px;
-                    margin-bottom: 5px;
+                        font-size: 18px;
+                        line-height: 24px;
+                        margin-bottom: 5px;
                     }   
                 }
                 @media screen and (max-width: 560px) {
                     .initial-info__description {
-                    max-width: 300px;
-                    font-size: 16px;
-                    line-height: 22px;
-                    margin-bottom: 10px;
+                        max-width: 300px;
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin-bottom: 10px;
                     }   
                 }
+
                 .initial-info__button {
                     display: flex;
                     flex-direction: row;
@@ -543,7 +502,6 @@ body {
                     .initial-info__button {
                        font-size: 14px;
                        margin-top: 4px;
-       
                     }  
                 }
                 @media screen and (max-width: 480px) {
@@ -551,7 +509,6 @@ body {
                        font-size: 12px;
                        width: 130px;
                        height: 30px;
-       
                     }  
                 }
                 .initial-info__button:hover {
@@ -580,7 +537,6 @@ body {
                         width: 350px;
                         height: 350px;
                         top: -30%;
-                        
                     }    
                 }
                 @media screen and (max-width: 560px) {
@@ -588,7 +544,6 @@ body {
                         width: 300px;
                         height: 300px;
                         top: -25%;
-                        
                     }    
                 }
                 @media screen and (max-width: 420px) {
@@ -596,7 +551,6 @@ body {
                         width: 250px;
                         height: 250px;
                         top: -15%;
-                        
                     }    
                 }
                 @media screen and (max-width: 360px) {
@@ -729,7 +683,6 @@ body {
                     font-size: 16px;
                 }
             }
-           
         }
         @media screen and (max-width: 768px) {
             .offering-for-investor-content__title-description-wrapper {
@@ -747,6 +700,7 @@ body {
             grid-gap: 40px 2.564%; //40px - для отступов между рядками (если контейнер увеличится и значение будет в процетнах - отступ увеличится,  а нам этого не нужно)
             
             margin: 0 1% 0 1%; //Дополнительный margin для контейнера - чтобы не прилипал при ширине 1170px и меньшен
+            
             .card-content {
                 width: 100%;// Ячейка грид контейнера уже задана - поэтому даем 100% ширины
                 height: 480px; //Здесь процент можно не ставить
@@ -758,15 +712,22 @@ body {
                     width: 100%; //370px 31.6239%
                     height: 720px; //480px тут оставим размер
                 }
+
                 .card:hover {
                     position: relative;
                     transition: all 1s ease-in-out;
                     top: -244px;      
                 }
+
                 .image-container {
                     width: 100%; //370px
                     height: 33.33%; //240 от 720 - 33.33%
+
                     border-top: 1px solid transparent; //нужнен для работающего margin тегов
+                    
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
                     .tags-container {
                         width: 87.02%; //по 24px отступы (?) - 322px - 87.02%
                         display: flex;
@@ -778,15 +739,18 @@ body {
                         margin: 7.45% auto 0 7.45%; //24 px от 322 - 7.45
                         .tags-container__tag {
                             padding: 8px 12px 6px 12px;
+                            margin: 0;
                             background: rgba(255, 255, 255, 0.8);
+
                             text-transform: uppercase;
+
                             font-family: 'Josefin Sans';
                             font-style: normal;
                             font-weight: bold;
                             font-size: 10px;
                             line-height: 12px;
                             color: #333333;
-                            margin: 0;
+                          
                         } //32px, сами теги прижать
                         @media (max-width: 768px) {
                             .tags-container__tag {
@@ -803,7 +767,6 @@ body {
                             align-items: flex-start;
 
                             margin: 2% 0 0 2%;
-
                         }
                     }
                 }
@@ -833,6 +796,7 @@ body {
                             line-height: 26px;
                         }
                     }
+
                     .description-and-range-container__city {
                         height: 24px;
                         font-family: 'Josefin Sans';
@@ -871,7 +835,6 @@ body {
                             line-height: 18px;
                         }  
                     }
-                    
                     @media screen and (max-width: 660px) {
                         .description-and-range-container__description {
                             height: 68px;
@@ -886,31 +849,37 @@ body {
                     .earn-container {
                         width: 100%;
                         height: 40px;
+
                         margin-top: 24px;
+
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         .earn-container__range {
                             height: 8px;
                             width: 100%;
+
                             background-color: #ECECEC;
                           
                             .earn-container__scale {
                                 height: 100%;
                                 width: 58%;
+
                                 background-color: $purple;
                             }
                         }
                         .money-container {
                             height: 24px;
                             .money-container__raised {
-                                color: $purple;
                                 height: 24px;
+
                                 font-family: 'Josefin Sans';
                                 font-style: normal;
                                 font-weight: 700;
                                 font-size: 16px;
                                 line-height: 24px;
+
+                                color: $purple;
                             }
                             @media (max-width: 500px) {
                                 .money-container__raised {
@@ -960,12 +929,10 @@ body {
                                     display: inline-block;
                                 }
                             }
-
                         }
-
-                    }
-                    
+                    }   
                 }
+
                 .investment-conditions-container {
                     height: 240px;
                     width: 100%;
@@ -976,7 +943,6 @@ body {
                         .conditions-content--margin-top {
                             margin-top: 4px !important;
                         }
-
                     }
                     .conditions-content {
                         width: 87.02%; //322px
@@ -1003,7 +969,6 @@ body {
                                     font-size: 14px;
                                     line-height: 18px;
                                 }
-
                             }
                             @media (max-width: 660px) {
                                 .condition-wrapper__condition {
@@ -1014,13 +979,13 @@ body {
                             
                             .condition-wrapper__value {
                                 height: 24px;
+
                                 font-family: 'Josefin Sans';
                                 font-style: normal;
                                 font-weight: 700;
                                 font-size: 16px;
                                 line-height: 24px;
-                                /* identical to box height, or 150% */
-                                /* Grey/1 */
+                                
                                 color: #333333;
                             }
                             @media (max-width: 768px) {
@@ -1035,8 +1000,6 @@ body {
                                     line-height: 16px;
                                 }
                             }
-                        
-
                         }
                         @media (max-width: 550px) {
                             .condition-wrapper { 
@@ -1048,14 +1011,15 @@ body {
                                 justify-content: center;
                                 align-items: center;
                             }
-
                         }
                     }
                     .investment-conditions-container__button {
-                        padding: 24px 40px 22px;
-                        margin-top: 24px;
                         width: 100%; //270px
                         height: 72px;
+                        
+                        padding: 24px 40px 22px;
+                        margin-top: 24px;
+                        
                         background: #336EE1;
                         text-transform: uppercase;
                         
@@ -1066,7 +1030,6 @@ body {
                         line-height: 24px;
                         color: white;
                     }
-
                     @media (max-width: 550px) {
                         .investment-conditions-container__button {
                         height: 24px;
@@ -1083,45 +1046,34 @@ body {
                     .investment-conditions-container__button:hover {
                         background: #235ac7;
                         cursor: pointer;
-
                     }
-
                 }
                 /*Бэкраунд для imageContainer - сам контейнер ниже -  imageContainer*/
                 .bg-image-path--scy-scrapper {
-                    background-image: url(../images/investCardImg/buildingBlack.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    background-image: url(../images/investCardImg/buildingBlack.jpg); 
                 }
+
                 .bg-image-path--key-chain {
                     background-image: url(../images/investCardImg/keyChainHouse.jpg);
-                    background-size: cover;
                     background-position: center;
-                    background-repeat: no-repeat;
-
                 }
+
                 .bg-image-path--building-nature {
                     background-image: url(../images/investCardImg/buildingNature.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-
                 }
+
                 .bg-image-path--laptop {
                     background-image: url(../images/investCardImg/laptopjpg.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
                 }
+
                 .bg-image-path--office {
                     background-image: url(../images/investCardImg/office.jpg);
-                    background-size: cover;
+
                     background-position: center;
-                    background-repeat: no-repeat;
                 }
+
                 .bg-image-path--wheat {
                     background-image: url(../images/investCardImg/wheatField.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-
                 }
                
             }
@@ -1139,8 +1091,7 @@ body {
                 grid-gap: 40px 2.564%;
                 
                 margin: 0 1% 0 1%; 
-            }
-            
+            }  
         }
         
         .invest-cards-container__button {
@@ -1169,21 +1120,34 @@ body {
             border: 1px solid #336EE1;
 
             transition: all .2s;
-
-
         }
         @media screen and (max-width: 1170px) {
             .invest-cards-container__button {
                 margin-bottom: 50px;
-            }
-            
+                
+            }  
+        }
+        @media screen and (max-width: 768px) {
+            .invest-cards-container__button {
+                width: 200px;
+                height: 60px;
+                padding: 0;
+
+                font-size: 14px;
+            }  
+        }
+        @media screen and (max-width: 580px) {
+            .invest-cards-container__button {
+                width: 160px;
+                height: 50px;
+                font-size: 12px;
+            }  
         }
         .invest-cards-container__button:hover {
             background-color: #336EE1;
             color: white;
             cursor: pointer;
         }
-
     }
         .invest-cards-container__decor-spinner {
             //width: 306px; //306px от 1920
@@ -1198,7 +1162,6 @@ body {
             top: 35.5%;
             animation: spinner 20s linear  infinite;
             
-
             @keyframes spinner {
                 from {
                     transform: rotate(0deg);
@@ -1206,36 +1169,35 @@ body {
                 to {
                     transform: rotate(360deg);
                 }
-            
             }
         }
         @media screen and (max-width: 1920px) {
             .invest-cards-container__decor-spinner {
                 width: 12%;
                 padding-top: 12%;
-            
-        }
+
+            }
         }
         @media screen and (max-width: 1720px) {
             .invest-cards-container__decor-spinner {
                 width: 8%;
-                padding-top: 8%;
-            
-        }
+                padding-top: 8%;  
+            }
         }
         @media screen and (max-width: 1500px) {
             .invest-cards-container__decor-spinner {
                 width: 8%;
                 padding-top: 8%;
                 top: 10%;    
-        }
+            }
         }
         @media screen and (max-width: 1024px) {
             .invest-cards-container__decor-spinner {
                 display: none;  
-        }
+            }
         }
 }
+
 .paymants-to-investor-container {
     min-height: 696px;
     
@@ -1244,24 +1206,30 @@ body {
     z-index: 10;
     display: flex;
     align-items: center;
+
     .paymants-to-investor-content {
         max-width: 1170px;
         height: 100%;
         
         margin: 0 auto;
+
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 29px;
+
         position: relative;
         z-index: 10;
         .summ-of-paids {
             height: 376px;
             max-width: 570px;
             display: block;
+
             .summ-of-paids__title {
                 height: 128px;
+                margin: 40px 0 24px 0;
+
                 font-family: 'Josefin Sans';
                 font-style: normal;
                 font-weight: 700;
@@ -1270,7 +1238,7 @@ body {
                 /* or 133% */
                 /* Grey/1 */
                 color: #333333;
-                margin: 40px 0 24px 0;
+               
             }
             @media (max-width: 768px) {
                 .summ-of-paids__title {
@@ -1304,6 +1272,8 @@ body {
             }
             .summ-of-paids__description {
                 height: 128px;
+                margin: 0;
+
                 font-family: 'Josefin Sans';
                 font-style: normal;
                 font-weight: 400;
@@ -1312,7 +1282,6 @@ body {
                 /* or 133% */
                 /* Grey/2 */
                 color: #999999;
-                margin: 0;
             }
             @media (max-width: 768px) {
                 .summ-of-paids__description {
@@ -1329,13 +1298,13 @@ body {
                     font-size: 16px;
                 }
             }
-            
         }
         @media (max-width: 560px) {
             .summ-of-paids {
                 height: 260px;
             }
         }
+
         .chart-container {
             max-width: 570px;
             min-height: 356px;
@@ -1352,20 +1321,21 @@ body {
         }
         .chart-container {
             margin-left: -8.07%;
-        }
-        
+        } 
     }
+
     .paymants-to-investor-container--decor-rounded-figure {
         height: 424px; //424px от 696 - 60.919
         width: 607.03px; //607.03px от 1920  31.616%
+
         background-image: url(../images/roundedFigure.svg);
         background-size: cover;
+
         position: absolute;
         //top: 38.94%;
         bottom: 0;
         left: 0;
-        z-index: 0;
-        
+        z-index: 0;  
     }
     @media screen and (max-width: 1024px) {
         .paymants-to-investor-container--decor-rounded-figure {
@@ -1379,11 +1349,11 @@ body {
             width: 100%;
         }  
     }
+
     .paymants-to-investor-container--decor-circle {
         position: absolute;
         right: 3.89%;
         top: 0;
-
     }
 }
 @media (max-width: 768px) {
@@ -1391,10 +1361,13 @@ body {
         min-height: 630px;
     }
 }
+
 .offer-for-grow-capital-container { 
     max-width: 1920px;
     height: 781.38px;
+
     background-color: white; //Можно убрать, с зеленым забавно
+
     position: relative;
     
     .offer-for-grow-capital-content {
@@ -1402,15 +1375,16 @@ body {
         //margin: 0 10px 0 10px;
         height: 100%;
         margin: 0 auto;
+
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         
-       
         .title-description-button {
             max-width: 570px;
             max-height: 422px;
+
             .title-description-button__title {
                 height: 192px;
                 font-family: 'Josefin Sans';
@@ -1432,24 +1406,24 @@ body {
             }
             @media screen and (max-width: 768px) {
                 .title-description-button__title {
-                    font-size: 32px;
-                    
+                    font-size: 32px;  
                 }  
             }
             @media screen and (max-width: 550px) {
                 .title-description-button__title {
-                    font-size: 24px;
-                    
+                    font-size: 24px; 
                 }  
             }
             @media screen and (max-width: 340px) {
                 .title-description-button__title {
-                    font-size: 20px;
-                    
+                    font-size: 20px; 
                 }  
             }
+
             .title-description-button__description {
                 height: 96px;
+                margin-bottom: 40px;
+
                 font-family: 'Josefin Sans';
                 font-style: normal;
                 font-weight: 400;
@@ -1458,33 +1432,40 @@ body {
                 /* or 133% */
                 /* Grey/2 */
                 color: #999999;
-                margin-bottom: 40px;
+               
             }
             @media screen and (max-width: 1024px) {
                 .title-description-button__description {
-                font-size: 20px;
-                line-height: 26px;
-                height: 75px;
+                    height: 75px;
+                    
+                    font-size: 20px;
+                    line-height: 26px;
                 }
             }
            
             @media screen and (max-width: 560px) {
                 .title-description-button__description {
-                font-size: 16px;
-                line-height: 24px;
-                height: 75px;
+                    height: 75px;
+
+                    font-size: 16px;
+                    line-height: 24px;
                 }
             }
+
             .title-description-button__button {
+                width: 270px;
+                height: 70px;
+                
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
+
                 padding: 24px 40px 22px;
                 gap: 4px;
-                width: 270px;
-                height: 70px;
+
                 background: #7B61FF;
+
                 font-family: 'Josefin Sans';
                 font-style: normal;
                 font-weight: 700;
@@ -1543,7 +1524,6 @@ body {
             height: 59.15%; //462 49.15
             //padding-top: 40.34%;
             
-            
             .offer-for-grow-capital-container__svg {
                 background-image: url(../images/cuate.svg);
                 background-size: contain;
@@ -1572,8 +1552,7 @@ body {
                 bottom: 1%;
                 right: 0%;
             }
-        }
-        
+        }  
     }
     @media screen and (max-width: 1170px) {
         .offer-for-grow-capital-content {
@@ -1585,6 +1564,7 @@ body {
             align-items: flex-start;
         }  
     }
+
     .offer-for-grow-capital-container__decorSpinner {
         width: 15.9375%; //306px от 1920 15.9375
         //height: 301px; //301px от 781 38.54%
@@ -1593,14 +1573,12 @@ body {
         background-size: cover;
         position: absolute;
         right: 0px;
-        top: 20.48%; //160 от 781 - 20.48
-        
+        top: 20.48%; //160 от 781 - 20.48 
     }
     @media screen and (max-width: 1765px) {
         .offer-for-grow-capital-container__decorSpinner {
             display: none;
         }
-        
     }   
 }
 @media (max-width: 768px) {
@@ -1641,6 +1619,7 @@ body {
            
             .name-copyright-content__company-name {
                 height: 24px;
+
                 text-transform: uppercase;
                 font-family: 'Josefin Sans';
                 font-style: normal;
@@ -1696,12 +1675,10 @@ body {
                 margin: 0;
             }  
         }
-        @media screen and (max-width: 768px) { 
-            
-                .name-copyright-content {
+        @media screen and (max-width: 768px) {
+            .name-copyright-content {
                     grid-area: a;
-                  }
-             
+            }    
         }
        
         
@@ -1713,11 +1690,13 @@ body {
             margin-right: 30px; //2.56%
             
             .services {
-                display: flex;
                 height: 100%;
                 width: 100%;
+
+                display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
                 .services__first-li {
                     font-family: 'Josefin Sans';
                     font-style: normal;
@@ -1787,7 +1766,6 @@ body {
             margin-right: 50px; //4.27%
             
             .about {
-                
                 display: flex;
                 
                 flex-direction: column;
@@ -1817,6 +1795,7 @@ body {
                 }
                 li {
                     height: 24px;
+
                     font-family: 'Josefin Sans';
                     font-style: normal;
                     font-weight: 400;
@@ -1838,10 +1817,9 @@ body {
                         line-height: 18px;
                     }
                 }
-
-            }
-            
+            }  
         }
+
         @media screen and (max-width: 1170px) {
             .about-content {
                 max-width: 370px;
@@ -1849,8 +1827,8 @@ body {
                 display: flex;
                 align-content: center;
             }
-            
         }
+
         @media screen and (max-width: 820px) {
             .about-content {
                 width: auto;  
@@ -1860,9 +1838,9 @@ body {
             .about-content {
                 grid-area: f;
                 justify-self: end;
-
               }
         }
+
         /*Up href*/
         .up {
             width: 50px;
@@ -1871,17 +1849,14 @@ body {
                 .up__svg-image {
                     width: 45px;
                     height: 45px;
-                    
                   }
                 }
             @media (max-width: 460px) {
                 .up__svg-image {
                     width: 35px;
-                    height: 35px;
-                        
+                    height: 35px;   
                     }
                 }
-           
         }
         @media (max-width: 768px) {
             .up {
@@ -1905,10 +1880,11 @@ body {
             height: 103px;
             
             margin-top: 77px;
-        
             
             .subscribe-content__title {
                 height: 36px;
+                margin: 0;
+
                 font-family: 'Josefin Sans';
                 font-style: normal;
                 font-weight: 400;
@@ -1917,8 +1893,6 @@ body {
                 /* identical to box height, or 150% */
                 /* Grey/1 */
                 color: #333333;
-                margin: 0;
-                
             }
             @media (max-width: 560px) {
                 .subscribe-content__title {
@@ -1944,13 +1918,18 @@ body {
                 .email-form {
                     height: 100%;
                     width: 100%;
+
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+
                     .email-form__email {
-                        background-color: #ECECEC;
                         height: 24px;
+
+                        background-color: #ECECEC;
+                       
                         border: none;
+
                         font-family: 'Josefin Sans';
                         font-style: normal;
                         font-weight: 400;
@@ -1959,7 +1938,6 @@ body {
                         /* identical to box height, or 150% */
                         /* Grey/1 */
                         color: #333333;
-            
                     }
                     @media (max-width: 360px) {
                         .email-form__email {
@@ -1971,6 +1949,7 @@ body {
                         height: 50px;
                        
                         padding: 0;
+
                         .email-form__svg-image-arrow {
                             padding: 0;
                             margin: 0;
@@ -1987,7 +1966,6 @@ body {
                                 height: 35px;
                             } 
                         }
-            
                     }
                     @media (max-width: 768px) {
                     .email-form__submit-button {
@@ -2043,48 +2021,7 @@ body {
           grid-template-columns: 25% 25% 25% 25%;
           grid-template-areas: "a a a b" "c c e f" "g g g h";
         }
-        /*
-        .name-copyright-content {
-          grid-area: a;
-        }*/
-
-        /*
-        .up {
-          grid-area: b;
-          position: absolute;
-          right: 0;
-        }
-        */
-        /*
-        .services-content {
-          grid-area: c;
-        }
-        */
-        /*
-        .about-content {
-          grid-area: f;
-          display: block;
-          justify-content: flex-end !important;
-        }
-        */
-        /*
-        .subscribe-content {
-          grid-area: g;
-          margin-top: 35px !important;
-        }
-        */
-        
-        /*
-        .social-media-icons-content {
-          grid-area: h;
-          margin-top: 120px !important;
-
-          justify-self: end;
-  
-        }
-        */
       }
-      
       
     /*Social media icons*/
     .social-media-icons-content {
@@ -2094,7 +2031,6 @@ body {
         display: flex;
         justify-content: space-between;
         margin: 164px 0 0 676px; //676 - 57.77%
-        
 
     }
     @media screen and (max-width: 1170px) {
